@@ -6,11 +6,29 @@ layout: default
 {% endunless %}
 {% assign posts_count = paginator.posts | size %}
 {% if posts_count > 0 %}
-<h1>recent articles</h1>
+<h1>Recent Articles:</h1>
     <div class="post-links">
       {% for post in paginator.posts %}
         <div class="post-link-wrapper">
           <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
+
+          {% if post.categories contains "CTF-writeup" %}
+          {{ post.ctf-category | capitalize-all | join: ', ' | prepend: "(" | append: ")"}}
+          {% endif %}
+          <div class="post-categories">
+            {% if post %}
+              {% assign categories = post.categories %}
+            {% else %}
+              {% assign categories = page.categories %}
+            {% endif %}
+            {% for category in categories %}
+            {{category}}
+
+            {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+          </div>
+
+        </a> By: </a><a href="/members">{{ post.author }}</a>
           <div class="post-meta">
 
             {% if site.plugins contains "jekyll/tagging" %}
@@ -24,11 +42,6 @@ layout: default
               {{ post.date | date: site.date_format }}
             {% else %}
               {{ post.date | date: "%b %-d, %Y" }}
-            {% endif %}
-            {% if site.show_excerpts == true %}
-              <div class="post-excerpt">
-                {{ post.content | strip_html | truncatewords: 50 }}
-              </div>
             {% endif %}
           </div>
         </div>
