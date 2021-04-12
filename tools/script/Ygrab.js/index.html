@@ -1,0 +1,37 @@
+<script src="//code.jquery.com/jquery-2.2.4.min.js"></script>
+<script src="js/ygrab.js"></script>
+<script>		
+$(function() {
+
+	var data = [
+    {
+        url: 'http://bachors.com/blog', // url string rquired
+        selector: 'div.post', // selector string rquired
+        loop: true, // each boolean rquired
+        result: [
+            {
+                name: 'title', // key string rquired
+                find: 'h3 a', // selector child string rquired
+                grab: {
+                    by: 'text', // attribut string rquired
+                    value: '' // attribut value string optional
+                }
+            },
+            {
+                name: 'link',
+                find: 'h3 a',
+                grab: {
+                    by: 'attr',
+                    value: 'href'
+                }
+            }
+        ]
+    }
+];
+
+ygrab(data, function(result) {
+	alert(JSON.stringify(result, null, 2));
+});
+	
+});
+</script>
