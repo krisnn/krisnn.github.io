@@ -1,0 +1,1 @@
+<iframe align="middle" allowtransparency="true" frameborder="0" height="280px" marginheight="0" marginwidth="2" scrolling="no" src="http://helplogger.googlecode.com/svn/trunk/html/adsense converter.html" width="100%"></iframe><a style="font-size: x-small;" href="http://helplogger.blogspot.com">Blogger Tricks and Tips</a>

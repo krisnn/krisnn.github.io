@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Module>
+<ModulePrefs
+  title = "Last Comments"
+  title_url = "http://last-comments.blogspot.com/p/last-comments.html"
+  description = "Displays a list of up to 200 of the last comments left on your blog the way you want them to appear. Choose from author, comment preview, post title and more to link to and display. Mimic recent comments on other blogging sites or make your own style. New in version 1.1: Improved look and feel."
+  thumbnail = "http://lh3.ggpht.com/_CueQp6P99Xo/TJzJGJYCR3I/AAAAAAAAAJ4/CjjP9turoR4/LC1.1thumbnail.png"
+  screenshot = "http://lh5.ggpht.com/_CueQp6P99Xo/TM7rJYfl2QI/AAAAAAAAAOs/lm7KRY5meoM/Screenshot%201-1.1.png"
+  author = "Aratina Cage"
+  author_email = "aratina.cag3+lc@gmail.com"
+  height = "50" >
+  <Require feature="google.blog" />
+  <Require feature="dynamic-height" />
+  <Require feature="opensocial-0.8" />
+  <Optional feature="skins" />
+</ModulePrefs>
+<UserPref name="a" display_name="SCROLL DOWN TO PREVIEW FOR HELP ============================= Adjust gadget height automatically? ============================= SCROLL DOWN TO PREVIEW FOR HELP" datatype="bool" default_value="true" />
+
+<UserPref name="b" display_name="=============================
+Number of comments:  (1-200; default: 10)
+=============================" />
+
+<UserPref name="c" display_name="Number of characters per comment: (1-998; 999 for full comment; default: 60)
+=============================" />
+
+<UserPref name="o" display_name="Choose font size:" datatype="enum" default_value="95">
+  <EnumValue display_value="150%" value="150" />
+  <EnumValue display_value="120%" value="120" />
+  <EnumValue display_value="110%" value="110" />
+  <EnumValue display_value="100%" value="100" />
+  <EnumValue display_value="95%" value="95" />
+  <EnumValue display_value="90%" value="90" />
+  <EnumValue display_value="85%" value="85" />
+  <EnumValue display_value="80%" value="80" />
+  <EnumValue display_value="75%" value="75" />
+  <EnumValue display_value="70%" value="70" />
+  <EnumValue display_value="65%" value="65" />
+  <EnumValue display_value="60%" value="60" />
+</UserPref>
+
+<UserPref name="d" display_name="=============================
+Enter your custom Display List: **leave blank to use default**
+=============================" />
+
+<UserPref name="q" display_name="Enter image URL for separator bar background: (Do NOT enter 'http://')  **leave blank to turn off**
+=============================" />
+
+<UserPref name="r" display_name="Choose separator bar/line color:" datatype="enum" default_value="0000FF" >
+  <EnumValue display_value="AliceBlue" value="F0F8FF" />
+  <EnumValue display_value="AntiqueWhite" value="FAEBD7" />
+  <EnumValue display_value="Aqua/Cyan" value="00FFFF" />
+  <EnumValue display_value="Aquamarine" value="7FFFD4" />
+  <EnumValue display_value="Azure" value="F0FFFF" />
+  <EnumValue display_value="Beige" value="F5F5DC" />
+  <EnumValue display_value="Bisque" value="FFE4C4" />
+  <EnumValue display_value="Black" value="000000" />
+  <EnumValue display_value="BlanchedAlmond" value="FFEBCD" />
+  <EnumValue display_value="Blue" value="0000FF" />
+  <EnumValue display_value="BlueViolet" value="8A2BE2" />
+  <EnumValue display_value="Brown" value="A52A2A" />
+  <EnumValue display_value="BurlyWood" value="DEB887" />
+  <EnumValue display_value="CadetBlue" value="5F9EA0" />
+  <EnumValue display_value="Chartreuse" value="7FFF00" />
+  <EnumValue display_value="Chocolate" value="D2691E" />
+  <EnumValue display_value="Coral" value="FF7F50" />
+  <EnumValue display_value="CornflowerBlue" value="6495ED" />
+  <EnumValue display_value="Cornsilk" value="FFF8DC" />
+  <EnumValue display_value="Crimson" value="DC143C" />
+  <EnumValue display_value="DarkBlue" value="00008B" />
+  <EnumValue display_value="DarkCyan" value="008B8B" />
+  <EnumValue display_value="DarkGoldenRod" value="B8860B" />
+  <EnumValue display_value="DarkGray" value="A9A9A9" />
+  <EnumValue display_value="DarkGreen" value="006400" />
+  <EnumValue display_value="DarkKhaki" value="BDB76B" />
+  <EnumValue display_value="DarkMagenta" value="8B008B" />
+  <EnumValue display_value="DarkOliveGreen" value="556B2F" />
+  <EnumValue display_value="Darkorange" value="FF8C00" />
+  <EnumValue display_value="DarkOrchid" value="9932CC" />
+  <EnumValue display_value="DarkRed" value="8B0000" />
+  <EnumValue display_value="DarkSalmon" value="E9967A" />
+  <EnumValue display_value="DarkSeaGreen" value="8FBC8F" />
+  <EnumValue display_value="DarkSlateBlue" value="483D8B" />
+  <EnumValue display_value="DarkSlateGray" value="2F4F4F" />
+  <EnumValue display_value="DarkTurquoise" value="00CED1" />
+  <EnumValue display_value="DarkViolet" value="9400D3" />
+  <EnumValue display_value="DeepPink" value="FF1493" />
+  <EnumValue display_value="DeepSkyBlue" value="00BFFF" />
+  <EnumValue display_value="DimGray" value="696969" />
+  <EnumValue display_value="DodgerBlue" value="1E90FF" />
+  <EnumValue display_value="FireBrick" value="B22222" />
+  <EnumValue display_value="FloralWhite" value="FFFAF0" />
+  <EnumValue display_value="ForestGreen" value="228B22" />
+  <EnumValue display_value="Fuchsia/Magenta" value="FF00FF" />
+  <EnumValue display_value="Gainsboro" value="DCDCDC" />
+  <EnumValue display_value="GhostWhite" value="F8F8FF" />
+  <EnumValue display_value="Gold" value="FFD700" />
+  <EnumValue display_value="GoldenRod" value="DAA520" />
+  <EnumValue display_value="Gray" value="808080" />
+  <EnumValue display_value="Green" value="008000" />
+  <EnumValue display_value="GreenYellow" value="ADFF2F" />
+  <EnumValue display_value="HoneyDew" value="F0FFF0" />
+  <EnumValue display_value="HotPink" value="FF69B4" />
+  <EnumValue display_value="IndianRed " value="CD5C5C" />
+  <EnumValue display_value="Indigo " value="4B0082" />
+  <EnumValue display_value="Ivory" value="FFFFF0" />
+  <EnumValue display_value="Khaki" value="F0E68C" />
+  <EnumValue display_value="Lavender" value="E6E6FA" />
+  <EnumValue display_value="LavenderBlush" value="FFF0F5" />
+  <EnumValue display_value="LawnGreen" value="7CFC00" />
+  <EnumValue display_value="LemonChiffon" value="FFFACD" />
+  <EnumValue display_value="LightBlue" value="ADD8E6" />
+  <EnumValue display_value="LightCoral" value="F08080" />
+  <EnumValue display_value="LightCyan" value="E0FFFF" />
+  <EnumValue display_value="LightGoldenRodYellow" value="FAFAD2" />
+  <EnumValue display_value="LightGrey" value="D3D3D3" />
+  <EnumValue display_value="LightGreen" value="90EE90" />
+  <EnumValue display_value="LightPink" value="FFB6C1" />
+  <EnumValue display_value="LightSalmon" value="FFA07A" />
+  <EnumValue display_value="LightSeaGreen" value="20B2AA" />
+  <EnumValue display_value="LightSkyBlue" value="87CEFA" />
+  <EnumValue display_value="LightSlateGray" value="778899" />
+  <EnumValue display_value="LightSteelBlue" value="B0C4DE" />
+  <EnumValue display_value="LightYellow" value="FFFFE0" />
+  <EnumValue display_value="Lime" value="00FF00" />
+  <EnumValue display_value="LimeGreen" value="32CD32" />
+  <EnumValue display_value="Linen" value="FAF0E6" />
+  <EnumValue display_value="Maroon" value="800000" />
+  <EnumValue display_value="MediumAquaMarine" value="66CDAA" />
+  <EnumValue display_value="MediumBlue" value="0000CD" />
+  <EnumValue display_value="MediumOrchid" value="BA55D3" />
+  <EnumValue display_value="MediumPurple" value="9370D8" />
+  <EnumValue display_value="MediumSeaGreen" value="3CB371" />
+  <EnumValue display_value="MediumSlateBlue" value="7B68EE" />
+  <EnumValue display_value="MediumSpringGreen" value="00FA9A" />
+  <EnumValue display_value="MediumTurquoise" value="48D1CC" />
+  <EnumValue display_value="MediumVioletRed" value="C71585" />
+  <EnumValue display_value="MidnightBlue" value="191970" />
+  <EnumValue display_value="MintCream" value="F5FFFA" />
+  <EnumValue display_value="MistyRose" value="FFE4E1" />
+  <EnumValue display_value="Moccasin" value="FFE4B5" />
+  <EnumValue display_value="NavajoWhite" value="FFDEAD" />
+  <EnumValue display_value="Navy" value="000080" />
+  <EnumValue display_value="OldLace" value="FDF5E6" />
+  <EnumValue display_value="Olive" value="808000" />
+  <EnumValue display_value="OliveDrab" value="6B8E23" />
+  <EnumValue display_value="Orange" value="FFA500" />
+  <EnumValue display_value="OrangeRed" value="FF4500" />
+  <EnumValue display_value="Orchid" value="DA70D6" />
+  <EnumValue display_value="PaleGoldenRod" value="EEE8AA" />
+  <EnumValue display_value="PaleGreen" value="98FB98" />
+  <EnumValue display_value="PaleTurquoise" value="AFEEEE" />
+  <EnumValue display_value="PaleVioletRed" value="D87093" />
+  <EnumValue display_value="PapayaWhip" value="FFEFD5" />
+  <EnumValue display_value="PeachPuff" value="FFDAB9" />
+  <EnumValue display_value="Peru" value="CD853F" />
+  <EnumValue display_value="Pink" value="FFC0CB" />
+  <EnumValue display_value="Plum" value="DDA0DD" />
+  <EnumValue display_value="PowderBlue" value="B0E0E6" />
+  <EnumValue display_value="Purple" value="800080" />
+  <EnumValue display_value="Red" value="FF0000" />
+  <EnumValue display_value="RosyBrown" value="BC8F8F" />
+  <EnumValue display_value="RoyalBlue" value="4169E1" />
+  <EnumValue display_value="SaddleBrown" value="8B4513" />
+  <EnumValue display_value="Salmon" value="FA8072" />
+  <EnumValue display_value="SandyBrown" value="F4A460" />
+  <EnumValue display_value="SeaGreen" value="2E8B57" />
+  <EnumValue display_value="SeaShell" value="FFF5EE" />
+  <EnumValue display_value="Sienna" value="A0522D" />
+  <EnumValue display_value="Silver" value="C0C0C0" />
+  <EnumValue display_value="SkyBlue" value="87CEEB" />
+  <EnumValue display_value="SlateBlue" value="6A5ACD" />
+  <EnumValue display_value="SlateGray" value="708090" />
+  <EnumValue display_value="Snow" value="FFFAFA" />
+  <EnumValue display_value="SpringGreen" value="00FF7F" />
+  <EnumValue display_value="SteelBlue" value="4682B4" />
+  <EnumValue display_value="Tan" value="D2B48C" />
+  <EnumValue display_value="Teal" value="008080" />
+  <EnumValue display_value="Thistle" value="D8BFD8" />
+  <EnumValue display_value="Tomato" value="FF6347" />
+  <EnumValue display_value="Turquoise" value="40E0D0" />
+  <EnumValue display_value="Violet" value="EE82EE" />
+  <EnumValue display_value="Wheat" value="F5DEB3" />
+  <EnumValue display_value="White" value="FFFFFF" />
+  <EnumValue display_value="WhiteSmoke" value="F5F5F5" />
+  <EnumValue display_value="Yellow" value="FFFF00" />
+  <EnumValue display_value="YellowGreen" value="9ACD32" />
+</UserPref>
+
+<UserPref name="s" display_name="=============================
+Choose separator bar thickness:
+=============================" datatype="enum" default_value="7">
+  <EnumValue display_value="1px" value="1" />
+  <EnumValue display_value="2px" value="2" />
+  <EnumValue display_value="3px" value="3" />
+  <EnumValue display_value="4px" value="4" />
+  <EnumValue display_value="5px" value="5" />
+  <EnumValue display_value="6px" value="6" />
+  <EnumValue display_value="7px" value="7" />
+  <EnumValue display_value="8px" value="8" />
+  <EnumValue display_value="9px" value="9" />
+  <EnumValue display_value="10px" value="10" />
+  <EnumValue display_value="11px" value="11" />
+  <EnumValue display_value="12px" value="12" />
+  <EnumValue display_value="13px" value="13" />
+  <EnumValue display_value="14px" value="14" />
+  <EnumValue display_value="15px" value="15" />
+  <EnumValue display_value="16px" value="16" />
+  <EnumValue display_value="17px" value="17" />
+  <EnumValue display_value="18px" value="18" />
+  <EnumValue display_value="19px" value="19" />
+  <EnumValue display_value="20px" value="20" />
+</UserPref>
+
+<Content type="html">
+<![CDATA[
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=8" />
+<base target="_top" />
+<style type="text/css">
+body {
+  margin: 0;
+  padding: 0;
+}
+.LCMsg {
+  font-size: __UP_o__%;
+}
+.LCNormalList, .LCFloatList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.LCFloat, .LCFloatList li {
+  float: left;
+  margin-right: 1em;
+}
+.LCNormalList li {
+  float: none;
+  margin-right: none;
+}
+.LCSection, .LCSectionBordered0 {
+  font-size: __UP_o__%;
+  overflow: hidden;
+}
+.LCSection {
+  margin-bottom: 0.8em;
+}
+.LCSectionBordered0 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-top: 1px dotted #__UP_r__;
+}
+.LCSectionBordered0:first-child {
+  border-top: none;
+}
+.LCLastSection {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.LCBlock {
+  display: block;
+  margin-bottom: .2em;
+}
+.LCInline {
+  display: inline;
+  margin-bottom: 0;
+}
+.LCTypeS {
+  font-size: 0;
+  height: __UP_s__px;
+  margin-bottom: 1px;
+  background: #__UP_r__ url(http://__UP_q__) repeat scroll left top;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+}
+.LCTypeA, .LCTypeC, .LCTypeD, .LCTypeL, .LCTypeP, .LCTypeT,
+.LCTypeA a, .LCTypeC a, .LCTypeD a, .LCTypeL a, .LCTypeP a, .LCTypeT a  {
+  text-decoration: none;
+}
+.LCStyleNormal {
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-decoration: none;
+}
+.LCStyleItalic {
+  font-style: italic;
+}
+.LCStyleBold {
+  font-weight: bold;
+}
+.LCStyleCaps {
+  font-variant: small-caps;
+}
+.LCStyleUnderline, .LCStyleUnderline a {
+  text-decoration: underline;
+}
+.LCStyleLarger {
+  font-size: 109%;
+}
+.LCStyleSmaller {
+  font-size: 91%;
+}
+.LCHelp {
+  background: #FFFFFF;
+  border: 5px double Gray;
+  margin: 0 0 2em 0;
+  padding: 3px;
+}
+.LCHelp h3 {
+  text-align: center;
+}
+.LCHelp table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 5px solid Gray;
+}
+.LCHelp table thead tr th {
+  text-decoration: underline;
+}
+.LCHelp table tbody tr th {
+  font-family: monospace;
+  font-weight: bold;
+  background-color: #EEE;
+  padding: 2px 5px;
+}
+.LCHelp table tbody tr td {
+  font-style: italic;
+  border-bottom: 5px double Gray;
+  padding: 2px 5px;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+// Last Comments 1.1.41 by Aratina Cage 2011
+// Refined styling and functionality concepts by John Loftus
+// Visitor comments only mode concept by Blackswan
+// Google Web Font concept by Robert
+// Enhanced Date and Time concept by The Prowler
+// Dotted border separator concept by Dazednconfuzed
+
+var WebFontConfig,LastComments;
+LastComments=function(){var g,x,A,y,s,q,u,v,D,E,F,G,w,H,I,t,J;q=function(a,b){this.date=new Date;this.useLocal=b?!0:!1;a?(this.dateStr=a,this.init()):this.dateStr=""};q.prototype.init=function(){var a=this.dateStr,a=a.split("T");a[0]=a[0].split("-");a[1]=a[1].split(".");a[1][0]=a[1][0].split(":");a[1][1]=[a[1][1].slice(0,3),a[1][1].slice(3)];a=a[0].concat(a[1][0].concat(a[1][1]));this.useLocal?(this.date.setUTCFullYear(a[0],a[1]-1,a[2]),/z/i.test(a[7])?this.date.setUTCHours(a[3],a[4],a[5],a[6]):(a[7]=
+a[7].split(":"),a[7][0]=parseInt(a[7][0],10),a[7][1]=parseInt(a[7][1],10),0>a[7][0]&&0!==a[7][1]&&(a[7][1]=-a[7][1]),this.date.setUTCHours(a[3]-a[7][0],a[4]-a[7][1],a[5],a[6]))):(this.date.setFullYear(a[0],a[1]-1,a[2]),this.date.setHours(a[3],a[4],a[5],a[6]))};q.prototype.printDate=function(a){var b="January,February,March,April,May,June,July,August,September,October,November,December".split(",");a||(a="YYYY-MMM-DD");a=a.replace(/YYYY/g,this.date.getFullYear());a=a.replace(/YY/g,this.date.getFullYear()%
+100);a=a.replace(/DD/g,("0"+this.date.getDate()).slice(-2));a=a.replace(/dD/g,this.date.getDate());a=a.replace(/MMMM/g,b[this.date.getMonth()]);a=a.replace(/MMM/g,b[this.date.getMonth()].slice(0,3));a=a.replace(/MM/g,("0"+(this.date.getMonth()+1)).slice(-2));return a=a.replace(/mM/g,this.date.getMonth()+1)};q.prototype.printTime=function(a){a||(a="hHH:MM");a=a.replace(/LLL/g,("00"+this.date.getMilliseconds()).slice(-3));a=a.replace(/SS/g,("0"+this.date.getSeconds()).slice(-2));a=a.replace(/MM/g,("0"+
+this.date.getMinutes()).slice(-2));a=a.replace(/HHH/g,("0"+this.date.getHours()).slice(-2));a=a.replace(/hHH/g,this.date.getHours());a=a.replace(/HH/g,("0"+(0<this.date.getHours()%12?this.date.getHours()%12:12)).slice(-2));a=a.replace(/hH/g,0<this.date.getHours()%12?this.date.getHours()%12:12);a=a.replace(/AMPM/g,12>this.date.getHours()?"AM":"PM");a=a.replace(/AmPm/g,12>this.date.getHours()?"A.M.":"P.M.");a=a.replace(/ampm/g,12>this.date.getHours()?"am":"pm");return a=a.replace(/aMpM/g,12>this.date.getHours()?
+"a.m.":"p.m.")};q.prototype.toString=function(){return this.date.toString()};y=function(){var a=!1;return function(){var b;!a&&g&&g.linkColor&&(a=!0,b=document.styleSheets[0],b.insertRule?(b.insertRule("a:link {color:"+g.linkColor+";}",b.cssRules.length),b.insertRule("a:visited {color:"+g.visitedLinkColor+";}",b.cssRules.length),b.insertRule("a:hover {text-decoration:underline;}",b.cssRules.length),b.insertRule("a.LCTypeCLink:link, a.LCTypeCLink:visited {color:"+g.textColor+";}",b.cssRules.length),
+b.insertRule("a.LCTypeCLink:hover {color:"+g.linkColor+"; text-decoration:underline;}",b.cssRules.length)):b.addRule&&(b.addRule("a:link","color:"+g.linkColor,b.rules.length),b.addRule("a:visited","color:"+g.visitedLinkColor,b.rules.length),b.addRule("a:hover","text-decoration:underline",b.rules.length),b.addRule("a.LCTypeCLink:link","color:"+g.textColor,b.rules.length),b.addRule("a.LCTypeCLink:visited","color:"+g.textColor,b.rules.length),b.addRule("a.LCTypeCLink:hover","color:"+g.linkColor+"; text-decoration:underline",
+b.rules.length)),g.autoAdjust&&gadgets.window.adjustHeight())}}();x=function(){var a,b,d=new gadgets.Prefs,c=d.getBool("a"),f=d.getInt("b"),e=d.getInt("c"),i=!1,g=!1,d=gadgets.util.unescapeString(d.getString("d")),j=/(?:^V?F?| -?[bceilnsuw]{0,9})([ACDLPT]).* -?[bceilnsuw]{0,9}\1/,o=/\+*\*/g,l=0,n,h=["S","lwAa _wrote:","Cc","lwPpon_ "],k="YYYY-MMM-DD;YYYY-MM-DD;YYYY/MM/DD;mM/dD/YYYY;mM/dD/YY;YYYY.MM.DD;dD.mM.YY;MMMM dD, YYYY;DD MMMM, YYYY;MMMM dD".split(";"),r="HHH:MM,hHH:MM,HHH:MM:SS,hHH:MM:SS,hH:MM AMPM,hH:MM ampm,hH:MM AmPm,hH:MM aMpM,hH:MM:SS aMpM,hH:MM:SS AMPM".split(","),
+K=k[0],L=r[0],q="transparent",s="transparent",t="",u="",v="",p="",w=document.createTextNode("Loading\u2026"),z=document.createElement("span"),B=document.getElementsByTagName("body")[0];a=B.style;var C=!1,x=!1;z.className="LCMsg";z.appendChild(w);B.appendChild(z);gadgets.skins&&gadgets.skins.getProperty&&(q=gadgets.util.unescapeString(gadgets.skins.getProperty("BORDER_COLOR")),s=gadgets.util.unescapeString(gadgets.skins.getProperty("CONTENT_BG_COLOR")),t=gadgets.util.unescapeString(gadgets.skins.getProperty("CONTENT_TEXT_COLOR")),
+u=gadgets.util.unescapeString(gadgets.skins.getProperty("CONTENT_LINK_COLOR")),v=gadgets.util.unescapeString(gadgets.skins.getProperty("CONTENT_VISITED_LINK_COLOR")),(p=gadgets.util.unescapeString(gadgets.skins.getProperty("FONT_FACE")))?";"===p.charAt(p.length-1)&&(p=p.slice(0,p.length-1)):(p="normal normal normal 13px Arial, sans-serif",!gadgets.skins.getProperty("TITLE")&&!gadgets.skins.getProperty("FACE_SIZE")&&(x=!0)));a.backgroundColor=s;a.borderColor=q;a.color=t;try{a.font=p}catch(A){a.font=
+"normal normal normal 13px Arial, sans-serif"}if(""===a.font)a.font="normal normal normal 13px Arial, sans-serif";if(!/normal|[0-9]|italic|oblique|inherit|small-caps|bold|lighter|small|medium|large/.test(p))a.fontFamily=p;WebFontConfig={google:{families:[]},active:y,inactive:y};a="signika negative,signika,niconne,knewave,righteous,ribeye marrow,ribeye,spirax,iceland,devonshire,fondamento,bitter,convergence,lancelot,petrona,supermercado one,arapey,mate sc,mate,rammetto one,fjord one,cabin sketch,jockey one,contrail one,atomic age,nosifer caps,eater caps,butcherman caps,creepster caps,corben,linden hill,quicksand,amatic sc,salsa,marck script,vast shadow,cookie,pinyon script,satisfy,rancho,coda,sancreek,ubuntu mono,ubuntu condensed,federant,andada,poly,gochi hand,alike angular,poller one,spinnaker,chivo,sansita one,terminal dosis,sorts mill goudy,adamina,prata,julee,changa one,merienda one,prociono,fanwood text,passero one,antic,dorsa,abril fatface,delius unicase,alike,monoton,gentium book basic,days one,numans,aldrich,vidaloka,short stack,montez,voltaire,volkhov,geostar fill,geostar,comfortaa,questrial,alice,andika,coustard,tulpen one,smokum,delius swash caps,actor,marvel,abel,rationale,rochester,delius,federo,aubrey,carme,black ops one,kelly slab,gloria hallelujah,ovo,snippet,leckerli one,rosario,unna,gentium basic,pompiere,yellowtail,istok web,tienne,bowlby one,modern antiqua,give you glory,yeseva one,varela round,patrick hand,forum,bowlby one sc,loved by the king,love ya like a sister,stardos stencil,hammersmith one,gravitas one,asset,goblin one,varela,redressed,nixie one,lobster two,shadows into light,la belle aurore,zeyada,cedarville cursive,kameron,lora,artifika,playfair display,limelight,tenor sans,maven pro,muli,podkova,wire one,nunito,brawler,ruslan display,jura,caudex,shanti,mako,metrophobic,nothing you could do,ultra,open sans condensed,play,didact gothic,judson,megrim,rokkitt,monofett,paytone one,holtwood one sc,carter one,sigmar one,francois one,bigshot one,swanky and moo moo,over the rainbow,wallpoet,news cycle,aclonica,the girl next door,smythe,quattrocento sans,special elite,waiting for the sunrise,sue ellen francisco,dawning of a new day,annie use your telescope,nova square,miltonian tattoo,miltonian,michroma,nova slim,nova script,nova round,nova oval,nova mono,nova flat,nova cut,eb garamond,oswald,irish grover,amaranth,quattrocentro,league script,indie flower,architects daughter,candal,pacifico,vt323,expletus sans,medievalsharp,anton,bevan,astloch,six caps,coda caption,cabin,pt serif,pt serif caption,goudy bookletter 1911,bangers,open sans,dancing script,kreon,meddon,radley,walter turncoat,slackey,schoolbell,kranky,homemade apple,cherry cream soda,calligraffitti,unkempt,sunshiney,rock salt,permanent marker,fontdiner swanky,crafty girls,coming soon,chewy,crushed,luckiest guy,lekton,buda,gruppo,kristi,just another hand,maiden orange,merriweather,syncopate,sniglet,vibur,ubuntu,allan,orbitron,kenia,anonymous pro,copse,lato,mountains of christmas,unifrakturcook,raleway,covered by your grace,just me again down here,unifrakturmaguntia,puritan,geo,bentham,allerta stencil,allerta,tinos,cousine,arimo,josefin slab,josefin sans,arvo,pt sans,pt sans narrow,pt sans caption,neucha,cuprum,philosopher,neuton,old standard tt,im fell dw pica sc,im fell dw pica,im fell great primer sc,im fell great primer,im fell french canon sc,im fell french canon,im fell english sc,im fell english,im fell double pica sc,im fell double pica,vollkorn,lobster,droid serif,droid sans mono,droid sans,yanone kaffeesatz,reenie beanie,nobile,cantarell,crimson text,molengo,cardo,tangerine,inconsolata".split(",");
+a=RegExp("("+a.join("|")+")(?:,|'|\"|$)","i");if(b=a.exec(p)){b=b[1]+":400";/italic/.test(p)&&(b+=",italic");if(/bold/.test(p)||/unifrakturcook|allan/i.test(b))b+=",700";/bold/.test(p)&&/italic/.test(p)&&(b+=",bolditalic");/sniglet|coda caption/i.test(b)&&(b+=",800");/buda|open sans condensed/i.test(b)&&(b+=",300");/raleway/i.test(b)&&(b+=",100");(a=/[1-9]00/.exec(p.split(" ").slice(0,3).join(" ")))&&(b+=","+a[0]);WebFontConfig.google.families.push(b)}if(0<WebFontConfig.google.families.length)a=document.createElement("script"),
+b=document.getElementsByTagName("script")[0],a.src=("https:"===document.location.protocol?"https":"http")+"://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js",a.type="text/javascript",a.async="true",b.parentNode.insertBefore(a,b);1>f&&(f=10);if(1>e||999<e)e=60;if(!/^V?F?(?:S0? |S0?$)?(?:[bceilnsuw]{0,9}(?:[ACLP]|[DT][0-9]?)[acpx]?(?:[^\s]{0,12}\*[^\s]{0,12})?(?: -?[bceilnsuw]{0,9}(?:[ACLP]|[DT][0-9]?)[acpx]?(?:[^\s]{0,12}\*[^\s]{0,12})?){0,5})?$/.test(d)||j.test(d)||""===d)d=h;else{d=/ /.test(d)?
+d.split(" "):[d];"V"===d[0].charAt(0)&&(g=!0,d[0]=d[0].slice(1));"F"===d[0].charAt(0)&&(i=!0,d[0]=d[0].slice(1));/S/.test(d[0])?(a=1,-1!==d[0].search(/0/)&&(C=!0)):a=0;if(d[a]&&1<=d[a].length)for(;a<d.length;){if(j=d[a].match(o)){for(b=0;b<j.length;b++)1===j[b].length%2&&(l++,n=b);if(1!==l){d=h;break}else j=j[n],d[a]=d[a].replace(j,j.slice(0,j.length-1)+" "),l=0}a++}else 1===a?d=h:(d=h,d.shift());C&&d.shift()}return{autoAdjust:c,numComments:f,previewLength:e,displayCode:d,showPostTitle:!1,floatSection:i,
+hideBlogOwners:g,retryFeedFetch:6,defAuthor:"someone",defUrl:"http://www.google.com",defHTML:"something",defPostTitle:"some post",dateFormatList:k,timeFormatList:r,dateFormat:K,timeFormat:L,borderColor:q,backgroundColor:s,textColor:t,linkColor:u,visitedLinkColor:v,font:p,msg:w,msgSpan:z,body:B,useBorder:C,isConfigWindow:x}};I=function(a){var b=[],d;d=function(a){a.firstChild&&d(a.firstChild);3===a.nodeType&&b.push(a);a.nextSibling&&d(a.nextSibling)};d(a.firstChild);return b};w=function(a){var b,d,
+c,f,e,i,m=0,j=0,o=g.previewLength;c=I(a);i=c[0];for(b=0,d=c.length;b<d;b++)if(j===o){for(f=i;f!==a;){c=f.parentNode;for(e=f.nextSibling;e;)c.removeChild(e),e=f.nextSibling;f=c}0===o&&i.deleteData(0,i.length);break}else f=c[b],j<o&&(i=f),j+=f.length,j>o&&(e=f.length-(j-o),m=f.length-e,f.deleteData(e,m),j-=m);(b<d||0!==m)&&i.appendData("\u2026")};G=function(a){for(var b,d,c,f,e,g,m=a.getElementsByTagName("a");0<m.length;){for(b=0;b<m.length;b++){f=m[b];g=f.parentNode;for(d=0,c=f.childNodes.length;d<
+c;d++)e=f.removeChild(f.firstChild),g.insertBefore(e,f);g.removeChild(f)}m=a.getElementsByTagName("a")}};H=function(a,b,d){var c,f;G(a);c=/[cp]/.test(d)?!1:!0;d=document.createElement("a");d.setAttribute("href",b);d.className="LCTypeCLink";c&&d.setAttribute("rel","nofollow");for(b=0,c=a.childNodes.length;b<c;b++)f=a.firstChild,a.removeChild(f),d.appendChild(f);a.appendChild(d)};F=function(a){var b,d=a.getElementsByTagName("a");for(a=0,b=d.length;a<b;a++)d[a].setAttribute("rel","nofollow")};E=function(){var a,
+b,d,c,f,e,i=[],m=g.displayCode;for(a=0,b=m.length;a<b;a++){f=m[a];i.push({});i[a].pretext="";i[a].posttext="";i[a].isOnNewLine=!0;i[a].type="";c=0;e=f.charAt(c);if("-"===e)i[a].isOnNewLine=!1,c++,e=f.charAt(c);i[a].style="";for(d=0;9>d;d++)/[bceilnsuw]/.test(e)&&(i[a].style+=e,c++,e=f.charAt(c));i[a].type=e;if("P"===e)g.showPostTitle=!0;else if("D"===e){if(-1!==f.charAt(c+1).search(/[0-9]/))c++,e=parseInt(f.charAt(c),10),g.dateFormat=g.dateFormatList[e]}else if("T"===e&&-1!==f.charAt(c+1).search(/[0-9]/))c++,
+e=parseInt(f.charAt(c),10),g.timeFormat=g.timeFormatList[e];c++;e=f.charAt(c);if(""!==e)/[acp]/.test(e)?(i[a].link=e,c++,e=f.charAt(c)):"x"===e&&(c++,e=f.charAt(c));if(""!==e){f=f.slice(c);c=f.search(/ /);f=[f.slice(0,c),f.slice(c+1)];if(""!==f[0]){c=0;for(e=f[0];c<e.length;)switch(e.charAt(c)){case "+":switch(e.charAt(c+1)){case "+":case "_":case "*":e=e.slice(0,c)+e.slice(c+1);c++;break;default:c++}break;case "_":e=e.slice(0,c)+" "+e.slice(c+1);c++;break;default:c++}i[a].pretext=e}if(""!==f[1]){c=
+0;for(e=f[1];c<e.length;)switch(e.charAt(c)){case "+":switch(e.charAt(c+1)){case "+":case "_":case "*":e=e.slice(0,c)+e.slice(c+1);c++;break;default:c++}break;case "_":e=e.slice(0,c)+" "+e.slice(c+1);c++;break;default:c++}i[a].posttext=e}}}return i};D=function(a){var b,d,c,f,e,i,m,j,o,l,n=0,h=a.length,k=a[n],r={};d=function(){return k.author&&k.author[0]&&k.author[0].name&&k.author[0].name.$t?k.author[0].name.$t:g.defAuthor};c=function(){return k.author&&k.author[0]&&k.author[0].uri&&k.author[0].uri.$t?
+k.author[0].uri.$t:"http://www.google.com/search?as_epq="+encodeURIComponent(d())+"&safe=active"};f=function(){return k.content&&k.content.$t?gadgets.util.unescapeString(k.content.$t):k.summary&&k.summary.$t?gadgets.util.unescapeString(k.summary.$t):g.defHTML};e=function(){var a,c;if(k.link){b=k.link;for(a=0,c=b.length;a<c;a++)if("alternate"===b[a].rel){b=b[a].href;if(/\?showComment=/.test(b))return b;a=k.id.$t;a=a.split("-");a=a[a.length-1];c=k.published.$t;c=c.slice(0,23).split("T");c=c[0].split("-").concat(c[1].split(":"));
+c=c.concat(c.pop().split("."));c=new Date(c[0],c[1]-1,c[2],c[3],c[4],c[5],c[6]);c="showComment="+c.getTime()+"#c"+a;return b+"?"+c}}};i=function(){return r[j()]};m=function(){return k["thr$in-reply-to"]&&k["thr$in-reply-to"].href?k["thr$in-reply-to"].href:g.defUrl};j=function(){b=m();if(/\/p\//.test(b)){if(k["thr$in-reply-to"]&&k["thr$in-reply-to"].source)return k["thr$in-reply-to"].source.replace("/posts/","/pages/")}else if(k["thr$in-reply-to"]&&k["thr$in-reply-to"].source)return k["thr$in-reply-to"].source;
+return g.defUrl};o=function(){return k.published&&k.published.$t?(new q(k.published.$t)).printDate(g.dateFormat):g.dateFormat};l=function(){return k.published&&k.published.$t?(new q(k.published.$t)).printTime(g.timeFormat):g.timeFormat};return{length:h,next:function(){n++;n>=h&&(n=0);k=a[n]},reset:function(){n=0;k=a[n]},getContent:function(a){switch(a){case "A":return d();case "C":return f();case "P":return i();case "D":return o();case "T":return l()}},getUrl:function(a){switch(a){case "a":return c();
+case "c":return e();case "p":return m();case "s":return j()}},postCache:r}};v=function(a,b){var d,c,f,e,i,m,j,o,l,n,h,k=document.createElement("ul"),r=document.createDocumentFragment();k.className=g.floatSection?"LCFloatList":"LCNormalList";b.reset();for(f=0,e=b.length;f<e;f++){m=document.createElement("li");m.className=g.useBorder?"LCSectionBordered0":"LCSection";j=document.createElement("div");j.className="LCBlock";for(d=0,c=a.length;d<c;d++){h=a[d];if(0!==d&&h.isOnNewLine)m.appendChild(j),j=document.createElement("div"),
+j.className="LCBlock";if("S"===h.type)j.className+=" LCType"+h.type,j.appendChild(document.createTextNode(" "));else{o=document.createElement("span");o.className="LCType"+h.type;l=document.createElement("span");if("L"===h.type)i=h.pretext+h.posttext,h.hasOwnProperty("link")?(n=document.createElement("a"),n.setAttribute("href",b.getUrl(h.link)),/[cp]/.test(h.link)||n.setAttribute("rel","nofollow"),/w/.test(h.style)?(n.appendChild(document.createTextNode(i)),l.appendChild(n)):(l.appendChild(document.createTextNode(i.replace(/\S.*$/,
+""))),n.appendChild(document.createTextNode(i.replace(/^\s*/,"").replace(/\s*$/,""))),l.appendChild(n),l.appendChild(document.createTextNode(i.replace(/^.*\S/,""))))):l.appendChild(document.createTextNode(i)),o.appendChild(l);else if("S"!==h.type)h.hasOwnProperty("link")?(""!==h.pretext&&!/w/.test(h.style)&&o.appendChild(document.createTextNode(h.pretext)),"C"===h.type?(n=document.createElement("span"),l.innerHTML=b.getContent(h.type),999!==g.previewLength&&w(l),n.appendChild(l),/w/.test(h.style)&&
+(""!==h.pretext&&n.insertBefore(document.createTextNode(h.pretext),n.firstChild),""!==h.postText&&n.appendChild(document.createTextNode(h.posttext))),H(n,b.getUrl(h.link),h.link)):(n=document.createElement("a"),n.setAttribute("href",b.getUrl(h.link)),/[cp]/.test(h.link)||n.setAttribute("rel","nofollow"),l.appendChild(document.createTextNode(b.getContent(h.type))),n.appendChild(l),/w/.test(h.style)&&(""!==h.pretext&&n.insertBefore(document.createTextNode(h.pretext),n.firstChild),""!==h.postText&&n.appendChild(document.createTextNode(h.posttext)))),
+o.appendChild(n),""!==h.posttext&&!/w/.test(h.style)&&o.appendChild(document.createTextNode(h.posttext))):(""!==h.pretext&&o.appendChild(document.createTextNode(h.pretext)),"C"===h.type?(l.innerHTML=b.getContent(h.type),999!==g.previewLength&&w(l),F(l)):l.appendChild(document.createTextNode(b.getContent(h.type))),o.appendChild(l),""!==h.posttext&&o.appendChild(document.createTextNode(h.posttext)));/e/.test(h.style)||(l=o);/n/.test(h.style)&&(l.className+=" LCStyleNormal");/b/.test(h.style)&&(l.className+=
+" LCStyleBold");/i/.test(h.style)&&(l.className+=" LCStyleItalic");/c/.test(h.style)&&(l.className+=" LCStyleCaps");/u/.test(h.style)&&(l.className+=" LCStyleUnderline");/l/.test(h.style)&&(l.className+=" LCStyleLarger");/s/.test(h.style)&&(l.className+=" LCStyleSmaller");j.appendChild(o)}}m.appendChild(j);k.appendChild(m);b.next()}m=document.createElement("div");m.className="LCTag";g.floatSection?m.className+=" LCFloat":k.lastChild.className+=" LCLastSection";r.appendChild(k);r.appendChild(m);g.body.removeChild(g.msgSpan);
+g.body.appendChild(r);g.autoAdjust&&gadgets.window.adjustHeight()};u=function(a){var b,d,c,f,e,i,m,j,o,l={};o=function(){var b,d=!1,e=0,g=a.length;b=function(){0===g&&0===e&&!d&&(d=!0,v(c,f))};return{addFetch:function(){e++},delFetch:function(){e--;b()},delCount:function(){g--;b()}}}();e=function(a){var b,c,d,e;if((a=a.data)&&a.entry&&0!==a.entry.length&&a.entry.link&&a.entry.title&&a.entry.title.$t){d=a.entry.link;for(b=0,c=d.length;b<c;b++)if("self"===d[b].rel){e=d[b].href;break}e&&(f.postCache[e]=
+gadgets.util.unescapeString(a.entry.title.$t))}o.delFetch()};c=E();f=D(a);if(g.showPostTitle){m={};l[gadgets.io.RequestParameters.CONTENT_TYPE]=gadgets.io.ContentType.JSON;l[gadgets.io.RequestParameters.REFRESH_INTERVAL]=0;l[gadgets.io.RequestParameters.NUM_ENTRIES]=1;for(b=0,d=a.length;b<d;b++)i=f.getUrl("s"),m.hasOwnProperty(i)||(o.addFetch(),m[i]=!0,j=i.split(/\//),j=j[j.length-1].slice(0,-5).replace(/-/g," "),j=j.toUpperCase(),f.postCache[i]=j,gadgets.io.makeRequest(i+"?alt=json&nocache="+(new Date).getTime(),
+e,l)),o.delCount(),f.next()}else v(c,f)};J=function(){var a,b,d,c,f=!0;return function(e){var i,m,j=e.entry;if(f){a=g.numComments;c=[];d=[];b=parseInt(e.openSearch$totalResults.$t,10);for(i=0;i<e.author.length;i++)c.push(e.author[i].uri.$t.slice(31));c=RegExp(c.join("|"));f=!1}for(i=0,m=j.length;0<a&&i<m;i++)if(!j[i].author[0].uri||!c.test(j[i].author[0].uri.$t))d.push(j[i]),a--;m+=parseInt(e.openSearch$startIndex.$t,10);0!==a&&m<=b?(i=10>a?10:a,t(s,m,i)):(f=!0,0===d.length?g.msg.nodeValue="No visitors have commented on your blog yet.":
+u(d))}}();s=function(a){var b;b=function(){var a=11,b;b=function(){a--;0<a?(g.msg.nodeValue=g.msg.nodeValue.slice(0,56)+a+" seconds\u2026",window.setTimeout(b,1E3)):(g.msg.nodeValue="Reloading\u2026",g.autoAdjust&&gadgets.window.adjustHeight(),t(s,1,g.numComments))};g.msg.nodeValue="There was a problem obtaining the comments. Retrying in 10 seconds\u2026";g.autoAdjust&&gadgets.window.adjustHeight();b()};a.data?!a.data.feed.entry||0===a.data.feed.entry.length?(g.msg.nodeValue="There are currently no comments on this blog.",
+g.autoAdjust&&gadgets.window.adjustHeight()):g.hideBlogOwners?J(a.data.feed):u(a.data.feed.entry):0<g.retryFeedFetch?(g.retryFeedFetch--,b()):(g.msg.nodeValue="A problem occurred that prevented the comments from being obtained.",g.autoAdjust&&gadgets.window.adjustHeight())};t=function(a,b,d){var c={};b||(b=1);if(!d)d=g.numComments;c[gadgets.io.RequestParameters.NUM_ENTRIES]=d;c[gadgets.io.RequestParameters.REFRESH_INTERVAL]=0;c[gadgets.io.RequestParameters.CONTENT_TYPE]=gadgets.io.ContentType.JSON;
+gadgets.io.makeRequest(A.commentFeed+"?alt=json&start-index="+b+"&max-results="+d+"&nocache="+(new Date).getTime(),a,c)};return{init:function(){var a;g=x();0===WebFontConfig.google.families.length&&y();if(g.isConfigWindow)a=document.createElement("div"),a.className="LCHelp",a.innerHTML='For help configuring this gadget, please refer to the user manual:<h3><a href="http://last-comments.blogspot.com/p/last-comments.html" title="Go to the User Manual" target="_blank">Last Comments User Manual</a></h3><table><thead><tr><th>Display List Examples</th></tr></thead><tbody><tr><th>S0</th></tr><tr><td>Switch to Separator Line</td></tr><tr><th>VS</th></tr><tr><td>Visitors Mode with Separator Bar</td></tr><tr><th>VS0</th></tr><tr><td>Visitors Mode with Separator Line</td></tr><tr><th>FS</th></tr><tr><td>Float Mode with Separator Bar</td></tr><tr><th>VFS</th></tr><tr><td>Visitors Mode + Float Mode with Separator Bar</td></tr><tr><th>Aa -Pc_on_*</th></tr><tr><td>WordPress Style</td></tr><tr><th>lwAc*_wrote... C</th></tr><tr><td>Recent Comments Gadget Style</td></tr><tr><th>S lwAa*_wrote: Cc lwPpon_*</th></tr><tr><td>Default Display List</td></tr></tbody></table><br/>The gadget preview follows; please be aware that the preview does not use the correct font face or background color.',
+document.body.insertBefore(a,document.body.firstChild),gadgets.window.adjustHeight();A=new google.Blog(function(){t(s,1,g.numComments)},window.name)}}}();gadgets.util.registerOnLoadHandler(LastComments.init);
+</script>
+</body>
+</html>
+]]>
+</Content>
+</Module>

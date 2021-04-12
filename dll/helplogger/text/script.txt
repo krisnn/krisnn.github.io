@@ -1,0 +1,100 @@
+<script type='text/javascript'>
+//<![CDATA[
+function createSummaryAndThumb(pID, pURL, pTITLE){
+var div = document.getElementById(pID);
+var imgtag = '<span class="posts-thumb"><a href="'+ pURL +'"><img src="http://4.bp.blogspot.com/-cFuBaGk7KUg/Ub9YhC5sZTI/AAAAAAAABoQ/20ZZx3r901M/s320/404spaceman.png" />' + '<h3 class="post-title2">' +pTITLE+ '</h3>' + '</a></span>';
+var img = div.getElementsByTagName("img");
+if(img.length>=1) {
+imgtag = '<span class="posts-thumb"><a href="'+ pURL +'"><img src="'+img[0].src+'"/>' + '<h3 class="post-title2">' +pTITLE+ '</h3>' + '</a></span>';
+}
+
+var summary = imgtag;
+div.innerHTML = summary;
+}
+//]]>
+</script>
+
+<b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+<b:if cond='data:blog.pageType != &quot;item&quot;'>
+<style type='text/css'>
+.post-body {
+    overflow: hidden;
+    margin: 0px 10px 10px 0px;
+    height: 217px;
+    width: 250px;
+    float: left;
+    display: inline-block;
+}
+
+h3.post-title2 {
+    filter: alpha(opacity=90);
+    -moz-opacity: 0.9;
+    -khtml-opacity: 0.9;
+    opacity: 0.9;
+    bottom: 0px;
+    margin-top: -50px;
+    z-index: 2;
+    position: absolute;
+    padding: 10px;
+    float: left;
+    clear: both;
+    text-decoration: none;
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+    background: rgb(125,126,125);
+    background: -moz-linear-gradient(top,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1)));
+    background: -webkit-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
+    background: -o-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
+    background: linear-gradient(to bottom,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=&#39;#7d7e7d&#39;, endColorstr=&#39;#0e0e0e&#39;,GradientType=0 );
+}
+
+span.posts-thumb a img {
+    width: 250px;
+    height: 217px;
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
+
+span.posts-thumb a img:hover {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=70)";
+filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    -khtml-opacity: 0.7;
+    opacity: 0.7;
+}
+
+.post-body img, .post-body .tr-caption-container, .Profile img, .Image img,
+.BlogList .item-thumbnail img {
+    padding: 0 !important;
+    border: none !important;
+    background: none !important;
+    -moz-box-shadow: 0px 0px 0px transparent !important;
+    -webkit-box-shadow: 0px 0px 0px transparent !important;
+    box-shadow: 0px 0px 0px transparent !important;
+}
+
+h3.post-title, h2.date-header, .post-header, .post-footer {
+    display: none;
+}
+
+#blog-pager {
+    clear: both;
+}
+
+.jump-link {
+    display: none; 
+}
+</style>
+</b:if>
+</b:if>

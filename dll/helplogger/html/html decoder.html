@@ -1,0 +1,54 @@
+<html>
+<head>
+<script type='text/javascript'>
+
+//<![CDATA[
+
+
+function html2entities(){
+var re=/[<>"'&]/g
+for (i=0; i<arguments.length; i++)
+arguments[i].value=arguments[i].value.replace(re, function(m){return replacechar(m)})
+}
+
+function replacechar(match){
+if (match=="<")
+return "&lt;"
+else if (match==">")
+return "&gt;"
+else if (match=="\"")
+return "&quot;"
+else if (match=="'")
+return "&#039;"
+else if (match=="&")
+return "&amp;"
+}
+//]]>
+</script>
+<script type='text/javascript'>
+
+//<![CDATA[
+
+//Character count script
+function countit(what){
+formcontent=what.form.charcount.value
+what.form.displaycount.value=formcontent.length
+}
+
+//]]>
+</script>
+</head>
+<body>
+
+<form>
+  <p><font color="#6B828E" size="2" face="Arial, Helvetica, sans-serif"> </font></p>
+<p>
+    <font color="#6B828E" size="2" face="Arial, Helvetica, sans-serif"><textarea name="data1" style="width: 485px; height: 200px;overflow:hidden; background-image:url(html-coder-txt.jpg); background-repeat:no-repeat; padding:10px;"></textarea>
+  </font></p>
+  <p align=""><font color="#6B828E" size="2" face="Arial, Helvetica, sans-serif"><br>
+      <input name="button" type="button" class="abt2" onClick="html2entities(this.form.data1)" onMouseOver="this.className='abt2 abt2hov'" onMouseOut="this.className='abt2'" value="Convert"> 
+      <input onMouseOver="this.className='abt3 abt3hov'" onMouseOut="this.className='abt3'" class="abt3" name="Clear" value="  Clear  " type="reset">
+    
+</form>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Helplogger ~ Demo</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="http://helplogger.googlecode.com/svn/trunk/css/[www.helplogger.blogspot.com]styles.css">
+<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js' type='text/javascript'></script>
+<script src='https://helplogger.googlecode.com/svn/trunk/css/[www.helplogger.blogspot.com]helplogger-popup.js' type='text/javascript'></script>
+<style type='text/css'>
+#helploggerpopup{
+position:absolute;
+top:100px;
+z-index:999;
+display:none;
+padding:0px;
+right:600px;
+border:10px solid #6F6F6F;
+-webkit-border-radius:8px 8px 8px 8px;
+-moz-border-radius:8px 8px 8px 8px;
+border-radius:8px 8px 8px 8px;
+width:400px;
+height:360px;
+overflow:hidden;
+}
+#helploggerpopup h1{
+background:#6d84b4 url(http://2.bp.blogspot.com/-cqyQ6aaXLW0/T1pBOMlBvsI/AAAAAAAABRU/xkxUo2qltVY/s1600/%5Bwww.helplogger.blogspot.com%5Dh1.png) 98% no-repeat;
+border:1px solid #3b5998;
+color:#FFFFFF !important;
+font-size:20px !important;
+font-weight:normal !important;
+padding:5px !important;
+margin:0 !important;
+font-family:'"lucida grande",tahoma,verdana,arial,sans-serif;
+overflow:hidden;
+}
+#htmlground{
+font-size:12px !important;
+font-weight:normal !important;
+height:260px;
+padding:1px;
+background:#fff !important;
+border-bottom:2px solid #ddd;
+overflow:hidden;
+}
+#hlfooter{
+background:#F2F2F2;
+height:56px;
+padding:10px 10px 10px 10px;
+overflow:hidden;
+}
+#helploggerpopup a{
+background-color:#eee;
+border:1px solid #ccc;
+color:#111;
+font-weight:normal;
+padding:5px 8px 5px 8px;
+text-decoration:none;
+display:inline-block;
+font-family:'"lucida grande",tahoma,verdana,arial,sans-serif;
+outline:none;
+position:relative;
+font-size:18px;
+margin:1px;
+}
+#helploggerpopup a:active{
+top:1px;
+left:1px;
+}</style>
+</head>
+  <body>
+<div id="page-wrap">
+<div id="header">
+<a href="http://helplogger.blogspot.com/"><img src='http://3.bp.blogspot.com/-4wcarE8bIso/T1pAoEuSSvI/AAAAAAAABRM/_zLhJMt2aJI/s1600/helplogger+homepage.png'></a>
+
+	<div id="social-icons">
+
+	<a href="http://www.facebook.com/pages/Helplogger/120574614736021"><img class="social-icon" id="facebook" src="http://1.bp.blogspot.com/-_c6ettNNwqc/T1pRELs8lBI/AAAAAAAABSM/Vk7P2xAdTS0/s1600/facebook.png" /></a>
+	<a href="http://feeds.feedburner.com/helplogger"><img class="social-icon" id="rss" src="http://4.bp.blogspot.com/-UaxFkflztkg/T1pQoOxbn_I/AAAAAAAABSA/-_rNQgUfFIY/s1600/rss.png" /></a>
+</div>
+	
+
+<div id="content">
+<h1>jQuery Popup Facebook Like Box Demo<h1>
+<br/>
+<div id='helploggerpopup'><h1>Join us on facebook</h1><div id='htmlground'><iframe src="//www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/Helplogger/120574614736021&amp;width=400&amp;colorscheme=light&amp;show_faces=true&amp;border_color=%23fff&amp;stream=false&amp;header=false&amp;height=250" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:250px;" allowtransparency="true"></iframe><div align='right'><iframe frameborder="0" height="20px" scrolling="no" src="http://helplogger.googlecode.com/svn/trunk/html/Helplogger-popup.html" width="150px"></iframe></div align='right'></div class='htmlground'><div id='hlfooter'><div align='right'><a href="#"  id="hlclose" onclick="return false;">Cancel</a></div align='right'></div id='footer'></div class='helploggerpopup'>
+	<br/>
+<script type="text/javascript">
+//<!--
+$(document).ready(function() {$(".w2bslikebox").hover(function() {$(this).stop().animate({right: "0"}, "medium");}, function() {$(this).stop().animate({right: "-250"}, "medium");}, 500);});
+//-->
+</script>
+<style type="text/css">
+.w2bslikebox{background: url("http://4.bp.blogspot.com/-33ZXC9M1kE0/T1pOZOXGzII/AAAAAAAABR0/cGeMH6X9ucU/s1600/w2b_facebookbadge.png") no-repeat scroll left center transparent !important;display: block;float: right;height: 270px;padding: 0 5px 0 46px;width: 245px;z-index: 99999;position:fixed;right:-250px;top:20%;}
+.w2bslikebox div{border:none;position:relative;display:block;}
+.w2bslikebox span{bottom: 12px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;right: 6px;text-align: right;z-index: 99999;}
+.w2bslikebox span a{color: #808080;text-decoration:none;}
+.w2bslikebox span a:hover{text-decoration:underline;}
+</style><div class="w2bslikebox" style=""><div><iframe src="http://www.facebook.com/plugins/likebox.php?href=http://www.facebook.com/pages/Helplogger/120574614736021&amp;width=245&amp;colorscheme=light&amp;show_faces=true&amp;connections=9&amp;stream=false&amp;header=false&amp;height=270" scrolling="no" frameborder="0" scrolling="no" style="border: medium none; overflow: hidden; height: 270px; width: 245px;background:#fff;"></iframe><span>By <a href="http://www.helplogger.blogspot.com/">Helplogger</a> / <a href="http://helplogger.blogspot.com/2012/09/add-static-facebook-pop-out-box.html">+Get This!</a></span></div></div>	
+</div><br />
+<div class="backtoblog">
+<a href="http://helplogger.blogspot.com/"><img src="http://4.bp.blogspot.com/-qsUkenEWiFE/T1pNNAF_6XI/AAAAAAAABRs/hC0mVOL5b5o/s1600/back-to-blog.png" /></a></div>
+
+</body>
+</html>
+
