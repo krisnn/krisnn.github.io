@@ -1,0 +1,103 @@
+@import url('main.css');
+
+#last_active {
+    right: 0;
+    color: #fff;
+    font-size: 12px;
+    margin-right: 5%;
+    position: absolute;
+    font-family: comfortaa;
+}
+
+#display {
+    position: relative;
+}
+
+.tabs {
+    z-index: 1;
+    position: relative;
+}
+
+#display-area {
+    overflow: auto;
+    border-radius: 0;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    font-size: 12.8px;
+    table-layout: fixed;
+    font-family: comfortaa;
+    background-color: var(--white-smoke);
+}
+
+table tr:nth-child(even) {
+    background-color: var(--white-smoke);
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--hd-color);
+    color: #fff;
+}
+
+table th {
+    padding: 0.7%;
+    font-size: 12px;
+    color: var(--white-smoke);
+    background-color: var(--bg-color);
+}
+
+td {
+    padding: 0.7%;
+    text-align: center;
+}
+
+.clickable:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#bots-amount {
+    margin-top: -1.5%;
+    position: absolute;
+    font-family: comfortaa;
+    color: var(--white-smoke);
+}
+
+#amount {
+    font-family: rich;
+    color: var(--white-smoke);
+}
+
+#server-status {
+    margin-top: 0.2%;
+    position: absolute;
+    font-family: comfortaa;
+    color: var(--white-smoke);
+}
+
+#bots-amount,
+#bots-amount > span,
+#server-status,
+#server-status > span {
+    font-size: 14px;
+}
+
+#bots-amount,
+#server-status {
+    margin-left: 79.5%;
+}
+
+#bots-amount > span,
+#server-status > span {
+    font-family: rich;
+}
+
+.status-on {
+    color: #008000;
+}
+
+.status-off {
+    color: var(--hot-red);
+}

@@ -1,0 +1,3 @@
+ignore pydns_server
+plugins
+start
