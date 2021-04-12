@@ -11,10 +11,6 @@ layout: default
       {% for post in paginator.posts %}
         <div class="post-link-wrapper">
           <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
-
-          {% if post.categories contains "CTF-writeup" %}
-          {{ post.ctf-category | capitalize-all | join: ', ' | prepend: "(" | append: ")"}}
-          {% endif %}
           <div class="post-categories">
             {% if post %}
               {% assign categories = post.categories %}
@@ -27,8 +23,6 @@ layout: default
             {% unless forloop.last %}&nbsp;{% endunless %}
             {% endfor %}
           </div>
-
-        </a> By: </a><a href="/members">{{ post.author }}</a>
           <div class="post-meta">
 
             {% if site.plugins contains "jekyll/tagging" %}
