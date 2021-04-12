@@ -1,13 +1,14 @@
-title: dash
-author: GitHub User
-email: miguel-gonzalez@gmx.de
+#title: dash
+title: krisnn
+#author: GitHub User
+author: krisnn
+#email: miguel-gonzalez@gmx.de
+email: me@normankristiono.net
 description: > # this means to ignore newlines until "show_exerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Tulisan iseng krisnn di github, silahkan dinikmati saja jangan banyak komentar
 show_excerpts: false # set to true to show excerpts on the homepage
 
-paginate: 5
+paginate: 3
 paginate_path: "/blog/page:num/"
 
 tag_permalink_style: pretty
