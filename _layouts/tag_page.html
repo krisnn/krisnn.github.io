@@ -10,7 +10,6 @@ layout: default
   {% for tag in post.tags %}
   {% if tag == page.tag %}
 
-
       <div class="post-link-wrapper">
         <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
         <div class="post-meta">
