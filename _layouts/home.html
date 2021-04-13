@@ -11,18 +11,6 @@ layout: default
       {% for post in paginator.posts %}
         <div class="post-link-wrapper">
           <a href="{{ post.url | relative_url }}" class="post-link">{{ post.title }}</a>
-          <div class="post-categories">
-            {% if post %}
-              {% assign categories = post.categories %}
-            {% else %}
-              {% assign categories = page.categories %}
-            {% endif %}
-            {% for category in categories %}
-            {{category}}
-
-            {% unless forloop.last %}&nbsp;{% endunless %}
-            {% endfor %}
-          </div>
           <div class="post-meta">
 
             {% if site.plugins contains "jekyll/tagging" %}
@@ -36,6 +24,11 @@ layout: default
               {{ post.date | date: site.date_format }}
             {% else %}
               {{ post.date | date: "%b %-d, %Y" }}
+            {% endif %}
+            {% if site.show_excerpts == true %}
+              <div class="post-excerpt">
+                {{ post.content | strip_html | truncatewords: 50 }}
+              </div>
             {% endif %}
           </div>
         </div>
