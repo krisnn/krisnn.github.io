@@ -13,6 +13,14 @@ layout: default
       {% endfor %}
   </div>
   {% endif %}
+  
+  <span>[
+  {% for tag in page.tags %}
+    {% capture tag_name %}{{ tag }}{% endcapture %}
+    <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+  {% endfor %}
+  ]</span>
+  
   <div class="post-date">Published on {{ page.date | date_to_string }}</div>
   {% if page.description != null %}
   <div class="post-description">{{ page.description }}</div>
