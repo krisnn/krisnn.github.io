@@ -1479,3 +1479,7 @@ a.newer-posts:hover {
     font-size: 21px;
   }
 }
+
+a:-webkit-any-link:active{
+	color: unset;
+}
