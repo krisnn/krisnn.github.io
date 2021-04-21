@@ -6,7 +6,7 @@ layout: main
   {% if post.img %}
     <a class="post-thumbnail" style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : post.img}})" href="{{post.url | prepend: site.baseurl}}"></a>
   {% else %}
-    <a class="post-thumbnail" style="background-image: url({{"/assets/img/sstt.gif"}})" href="{{post.url | prepend: site.baseurl}}"></a>
+    <a class="post-thumbnail" style="background-image: url({{/assets/img/sstt.gif}})" href="{{post.url | prepend: site.baseurl}}"></a>
   {% endif %}
   <a href="{{post.url | prepend: site.baseurl}}" style="text-decoration: none;color: inherit;" />
   <div class="post-content">
