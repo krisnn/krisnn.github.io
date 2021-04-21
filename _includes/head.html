@@ -74,8 +74,12 @@
   {% else %}
     <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.author-img }}">
   {% endif %}
+  {% if page.img %}
+    <meta content="{{ page.description }}" name="keywords" />
+  {% else %}
+    <meta content="{{ site.description }}" name="keywords" />
+  {% endif %}
 	<meta property='og:locale' content='id_ID' />
-	<meta content='tricky tipsy friend, tricky tipsy,information,tips,trick, tutorial, css, seo' name='keywords'/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="shortcut icon" href="{{ "/assets/img/favicon/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
