@@ -1,0 +1,37 @@
+title: Hello, world! I'm krisn
+description: > # this means to ignore newlines until "baseurl:"
+  Web developer and it engineering focus on learning to be devops and also enjoy learning everything.
+keyword: > 
+  norman kristiono, normankristiono.net, krisn, krisnn_, 404website
+permalink: ':title/'
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "https://krisnn.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+site-twitter: #if your site has a twitter account, enter it here
+
+# Author Settings
+author: Norman Kristiono # add your name
+author-img: nk.png # add your photo
+about-author: IT Enthusiast. # add description
+#social-twitter: # add your Twitter handle
+#social-facebook: # add your Facebook handle
+social-github: krisnn # add your Github handle
+social-linkedin: nkristiono # add your Linkedin handle
+social-email: norman.kristiono@gmail.com # add your Email address
+
+# Disqus
+discus-identifier: # add your discus identifier
+
+# Tracker
+analytics: # Google Analytics
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jemoji
+
+paginate: 3
+paginate_path: "/page/:num"
+
+exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
