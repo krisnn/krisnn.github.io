@@ -13,13 +13,10 @@ ZABBIX_AGENT_CONF="/etc/zabbix/zabbix_agentd.conf";
 ZABBIX_SERVER="192.168.57.224";
 HOSTNAME=`hostname`;
 # add some params to the configure file of zabbix-agent
-echo "PidFile=/var/run/zabbix/zabbix_agentd.pid" >> $ZABBIX_AGENT_CONF;
 echo "LogFile=/var/log/zabbix/zabbix_agentd.log" >> $ZABBIX_AGENT_CONF;
-echo "LogFileSize=0" >> $ZABBIX_AGENT_CONF;
 echo "Server=$ZABBIX_SERVER" >> $ZABBIX_AGENT_CONF;
 echo "ServerActive=$ZABBIX_SERVER" >> $ZABBIX_AGENT_CONF;
 echo "Hostname=$HOSTNAME" >> $ZABBIX_AGENT_CONF;
-echo "Include=/etc/zabbix/zabbix_agentd.d/" >> $ZABBIX_AGENT_CONF;
 
 ############## Add Firewall Rules #####################################
 
