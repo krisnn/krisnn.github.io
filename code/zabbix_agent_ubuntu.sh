@@ -1,43 +1,16 @@
-#!/bin/bash
+#!/bin/bash -e
 
-################################ Install the Zabbix Agent ###################################
+if [ "$UID" -ne 0 ]; then
+  echo "Please run as root"
+  exit 1
+fi
 
-sudo wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+bionic_all.deb
-dpkg -i zabbix-release_5.0-1+bionic_all.deb
-sudo apt update
-sudo apt install -y zabbix-agent
-
-################################# Edit the file conf #############################################
-# edit file /etc/zabbix/zabbix_agentd.conf and add this change
-ZABBIX_AGENT_CONF="/etc/zabbix/zabbix_agentd.conf";
-ZABBIX_SERVER="192.168.57.224";
-HOSTNAME=`hostname`;
-# add some params to the configure file of zabbix-agent
-echo "LogFile=/var/log/zabbix/zabbix_agentd.log" >> $ZABBIX_AGENT_CONF;
-echo "Server=$ZABBIX_SERVER" >> $ZABBIX_AGENT_CONF;
-echo "ServerActive=$ZABBIX_SERVER" >> $ZABBIX_AGENT_CONF;
-echo "Hostname=$HOSTNAME" >> $ZABBIX_AGENT_CONF;
-
-############## Add Firewall Rules #####################################
-
-# Open port 10050 on firewall (iptables) Only for CentOS 7
-#PORT=10050;
-# remember to hability the port in the local firewall.
-# firewall-cmd --permanent --add-port=$PORT/tcp
-# firewall-cmd --permanent --add-port=10051/tcp
-#sudo systemctl restart firewalld
-
-# Open port 10050 on firewall (iptables) Only for CentOS 6.X
-#sudo iptables -I INPUT -p tcp -m tcp --dport $PORT -j ACCEPT
-#sudo iptables -I INPUT -p udp -m udp --dport $PORT -j ACCEPT
-#sudo iptables -A INPUT -m state --state NEW -p tcp --dport $PORT -j ACCEPT
-#sudo iptables -A INPUT -m state --state NEW -p udp --dport $PORT -j ACCEPT
-#sudo service iptables save
-
-######################################################################
-#### Restart the services ############################################
-#sudo systemctl start zabbix-agent
-#sudo systemctl enable zabbix-agent
-######################################################################
-sudo systemctl enable zabbix-agent
-sudo service zabbix-agent restart
+# Only run it if we can (ie. on Ubuntu/Debian)
+if [ -x /usr/bin/apt-get ]; then
+  apt-get update
+  apt-get -y install zabbix-agent
+  sed -i 's/Server=127.0.0.1/Server=192.168.57.224/' /etc/zabbix/zabbix_agentd.conf
+  sed -i 's/ServerActive=127.0.0.1/ServerActive=192.168.57.224/' /etc/zabbix/zabbix_agentd.conf
+  HOSTNAME=`hostname` && sed -i "s/Hostname=Zabbix\ server/Hostname=$HOSTNAME/" /etc/zabbix/zabbix_agentd.conf
+  service zabbix-agent restart
+fi
