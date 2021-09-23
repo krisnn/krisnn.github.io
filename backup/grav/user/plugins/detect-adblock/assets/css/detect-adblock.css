@@ -1,0 +1,47 @@
+.detect-adblock-popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255,0.8);
+  z-index: 100;
+}
+
+.detect-adblock-popup .dab-message {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  top: 20%;
+  background: #FFFFFF;
+  padding: 2rem;
+  border: 2px solid #555555;
+  border-radius: 1rem;
+}
+
+.detect-adblock-popup .dab-message .dab-buttons {
+  position: absolute;
+  width: 100px;
+  height: 48px;
+  top: 1rem;
+  right: 3%;
+  text-align: right;
+  font-size: 2rem;
+}
+
+.detect-adblock-popup .dab-message .dab-content {
+  font-size: 1.5rem;
+}
+
+.detect-adblock-inside {
+  border: 2px solid #d08c43;
+  border-radius: 1rem;
+  background-color: #efdacf;
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: #d07014;
+}
+
+.detect-adblock-inside p {
+  margin: 0.8rem;
+}

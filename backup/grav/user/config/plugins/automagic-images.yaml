@@ -1,0 +1,26 @@
+enabled: true
+adapter: imagick
+remove_original: true
+sizes:
+  -
+    width: 640
+    quality: 92
+  -
+    width: 1000
+    quality: 90
+  -
+    width: 1500
+    quality: 87
+  -
+    width: 2500
+    quality: 85
+  -
+    width: 3500
+    quality: 82
+sizesattr:
+  -
+    class: default
+    directive: 100vw
+  -
+    class: example
+    directive: '(min-width: 20em) 33%, 100vw'
