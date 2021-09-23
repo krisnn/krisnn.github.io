@@ -44,6 +44,7 @@ use function is_array;
 use function is_object;
 use function is_scalar;
 use function is_string;
+use function json_encode;
 
 /**
  * Class FlexObject
@@ -69,6 +70,8 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
     private $_blueprint = [];
     /** @var array */
     private $_meta;
+    /** @var array */
+    protected $_original;
     /** @var array */
     protected $_changes;
     /** @var string */
@@ -369,7 +372,7 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
      */
     public function searchProperty(string $property, string $search, array $options = null): float
     {
-        $options = $options ?? $this->getFlexDirectory()->getConfig('data.search.options', []);
+        $options = $options ?? (array)$this->getFlexDirectory()->getConfig('data.search.options');
         $value = $this->getProperty($property);
 
         return $this->searchValue($property, $value, $search, $options);
@@ -383,7 +386,7 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
      */
     public function searchNestedProperty(string $property, string $search, array $options = null): float
     {
-        $options = $options ?? $this->getFlexDirectory()->getConfig('data.search.options', []);
+        $options = $options ?? (array)$this->getFlexDirectory()->getConfig('data.search.options');
         if ($property === 'key') {
             $value = $this->getKey();
         } else {
@@ -438,6 +441,16 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
         }
 
         return 0;
+    }
+
+    /**
+     * Get original data before update
+     *
+     * @return array
+     */
+    public function getOriginalData(): array
+    {
+        return $this->_original ?? [];
     }
 
     /**
@@ -653,7 +666,8 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
             }
 
             // Store the changes
-            $this->_changes = Utils::arrayDiffMultidimensional($this->getElements(), $elements);
+            $this->_original = $this->getElements();
+            $this->_changes = Utils::arrayDiffMultidimensional($this->_original, $elements);
         }
 
         if ($files && method_exists($this, 'setUpdatedMedia')) {
@@ -820,11 +834,12 @@ class FlexObject implements FlexObjectInterface, FlexAuthorizeInterface
      */
     public function getForm(string $name = '', array $options = null)
     {
-        if (!isset($this->_forms[$name])) {
-            $this->_forms[$name] = $this->createFormObject($name, $options);
+        $hash = $name . '-' . md5(json_encode($options, JSON_THROW_ON_ERROR));
+        if (!isset($this->_forms[$hash])) {
+            $this->_forms[$hash] = $this->createFormObject($name, $options);
         }
 
-        return $this->_forms[$name];
+        return $this->_forms[$hash];
     }
 
     /**

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit65421386e01642410eec06c49bb17507
+class ComposerStaticInit8dd2ce00f1c6bcc9413b7dcfebb4f362
 {
     public static $files = array (
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
@@ -14,8 +14,8 @@ class ComposerStaticInit65421386e01642410eec06c49bb17507
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'da5f6548f070d3d306f90eee42dd5de6' => __DIR__ . '/..' . '/donatj/phpuseragentparser/src/UserAgentParser.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        'b686b8e46447868025a15ce5d0cb2634' => __DIR__ . '/..' . '/symfony/polyfill-php74/bootstrap.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
+        'b686b8e46447868025a15ce5d0cb2634' => __DIR__ . '/..' . '/symfony/polyfill-php74/bootstrap.php',
         'a686abd6bcd0f7067184e090d1174003' => __DIR__ . '/../..' . '/system/defines.php',
     );
 
@@ -545,6 +545,7 @@ class ComposerStaticInit65421386e01642410eec06c49bb17507
         'Doctrine\\Common\\Cache\\Psr6\\CacheItem' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/Psr6/CacheItem.php',
         'Doctrine\\Common\\Cache\\Psr6\\DoctrineProvider' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/Psr6/DoctrineProvider.php',
         'Doctrine\\Common\\Cache\\Psr6\\InvalidArgument' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/Psr6/InvalidArgument.php',
+        'Doctrine\\Common\\Cache\\Psr6\\TypedCacheItem' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/Psr6/TypedCacheItem.php',
         'Doctrine\\Common\\Cache\\RedisCache' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/RedisCache.php',
         'Doctrine\\Common\\Cache\\SQLite3Cache' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/SQLite3Cache.php',
         'Doctrine\\Common\\Cache\\Version' => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache/Version.php',
@@ -766,6 +767,7 @@ class ComposerStaticInit65421386e01642410eec06c49bb17507
         'Grav\\Common\\Taxonomy' => __DIR__ . '/../..' . '/system/src/Grav/Common/Taxonomy.php',
         'Grav\\Common\\Theme' => __DIR__ . '/../..' . '/system/src/Grav/Common/Theme.php',
         'Grav\\Common\\Themes' => __DIR__ . '/../..' . '/system/src/Grav/Common/Themes.php',
+        'Grav\\Common\\Twig\\Exception\\TwigException' => __DIR__ . '/../..' . '/system/src/Grav/Common/Twig/Exception/TwigException.php',
         'Grav\\Common\\Twig\\Extension\\FilesystemExtension' => __DIR__ . '/../..' . '/system/src/Grav/Common/Twig/Extension/FilesystemExtension.php',
         'Grav\\Common\\Twig\\Extension\\GravExtension' => __DIR__ . '/../..' . '/system/src/Grav/Common/Twig/Extension/GravExtension.php',
         'Grav\\Common\\Twig\\Node\\TwigNodeCache' => __DIR__ . '/../..' . '/system/src/Grav/Common/Twig/Node/TwigNodeCache.php',
@@ -935,6 +937,7 @@ class ComposerStaticInit65421386e01642410eec06c49bb17507
         'Grav\\Framework\\Media\\Interfaces\\MediaInterface' => __DIR__ . '/../..' . '/system/src/Grav/Framework/Media/Interfaces/MediaInterface.php',
         'Grav\\Framework\\Media\\Interfaces\\MediaManipulationInterface' => __DIR__ . '/../..' . '/system/src/Grav/Framework/Media/Interfaces/MediaManipulationInterface.php',
         'Grav\\Framework\\Media\\Interfaces\\MediaObjectInterface' => __DIR__ . '/../..' . '/system/src/Grav/Framework/Media/Interfaces/MediaObjectInterface.php',
+        'Grav\\Framework\\Mime\\MimeTypes' => __DIR__ . '/../..' . '/system/src/Grav/Framework/Mime/MimeTypes.php',
         'Grav\\Framework\\Object\\Access\\ArrayAccessTrait' => __DIR__ . '/../..' . '/system/src/Grav/Framework/Object/Access/ArrayAccessTrait.php',
         'Grav\\Framework\\Object\\Access\\NestedArrayAccessTrait' => __DIR__ . '/../..' . '/system/src/Grav/Framework/Object/Access/NestedArrayAccessTrait.php',
         'Grav\\Framework\\Object\\Access\\NestedPropertyCollectionTrait' => __DIR__ . '/../..' . '/system/src/Grav/Framework/Object/Access/NestedPropertyCollectionTrait.php',
@@ -2074,11 +2077,11 @@ class ComposerStaticInit65421386e01642410eec06c49bb17507
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit65421386e01642410eec06c49bb17507::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit65421386e01642410eec06c49bb17507::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr4 = ComposerStaticInit65421386e01642410eec06c49bb17507::$fallbackDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit65421386e01642410eec06c49bb17507::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit65421386e01642410eec06c49bb17507::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8dd2ce00f1c6bcc9413b7dcfebb4f362::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8dd2ce00f1c6bcc9413b7dcfebb4f362::$prefixDirsPsr4;
+            $loader->fallbackDirsPsr4 = ComposerStaticInit8dd2ce00f1c6bcc9413b7dcfebb4f362::$fallbackDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit8dd2ce00f1c6bcc9413b7dcfebb4f362::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit8dd2ce00f1c6bcc9413b7dcfebb4f362::$classMap;
 
         }, null, ClassLoader::class);
     }

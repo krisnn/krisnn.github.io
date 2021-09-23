@@ -155,6 +155,7 @@ class GravExtension extends AbstractExtension implements GlobalsInterface
             new TwigFilter('bool', [$this, 'boolFilter']),
             new TwigFilter('float', [$this, 'floatFilter'], ['is_safe' => ['all']]),
             new TwigFilter('array', [$this, 'arrayFilter']),
+            new TwigFilter('yaml', [$this, 'yamlFilter']),
 
             // Object Types
             new TwigFilter('get_type', [$this, 'getTypeFunc']),
@@ -805,6 +806,17 @@ class GravExtension extends AbstractExtension implements GlobalsInterface
         }
 
         return (array)$input;
+    }
+
+    /**
+     * @param array|object $value
+     * @param int|null $inline
+     * @param int|null $indent
+     * @return string
+     */
+    public function yamlFilter($value, $inline = null, $indent = null): string
+    {
+        return Yaml::dump($value, $inline, $indent);
     }
 
     /**
@@ -1499,7 +1511,7 @@ class GravExtension extends AbstractExtension implements GlobalsInterface
             }
 
             //Look for existing class
-            $svg = preg_replace_callback('/^<svg[^>]*(class=\")([^"]*)(\")[^>]*>/', function($matches) use ($classes, &$matched) {
+            $svg = preg_replace_callback('/^<svg[^>]*(class=\"([^"]*)\")[^>]*>/', function($matches) use ($classes, &$matched) {
                 if (isset($matches[2])) {
                     $new_classes = $matches[2] . $classes;
                     $matched = true;
