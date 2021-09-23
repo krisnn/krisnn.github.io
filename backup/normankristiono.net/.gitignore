@@ -1,0 +1,8 @@
+*.log
+sitemap.xml
+sitemap.xml.gz
+readme.txt
+**/1/template/
+*.zip
+*.7z
+*.rar

@@ -1,0 +1,135 @@
+*, img, body{ margin: 0; padding: 0; border: 0}
+body{
+	font-family: -apple-system,BlinkMacSystemFont,"Roboto","Segoe UI","Oxygen-Sans","Ubuntu","Cantarell","Helvetica Neue",sans-serif;
+	color: #545454;
+	overflow-x: hidden;
+	line-height: 20px;
+	cursor: default
+}
+header{
+	padding: 36px 0 0 0
+
+}
+.logo{
+	width: 48px;
+	opacity: 0.75;
+	padding: 0 0 18px 6%;
+	margin-left: -10px
+}
+.intro{
+	padding: 0px 6% 48px 6%;
+	background-color: #fff;
+	margin: 0 auto
+}
+hr{
+	height: 0px;
+	border-bottom: 1px solid #ddd;
+	margin: -1px 0px 24px 0px;
+	max-width: 48px
+}
+li{
+	list-style-type: none;
+	margin: 0 0 8px 0
+}
+/*type*/
+h1{ 
+	color: #1a1a1a;
+	font-size: 20px;
+	padding: 0px 0px 24px 6%;
+	font-weight: normal;
+	line-height: 24px
+}
+h1 i{
+	color: #f44336
+}
+h2{
+	font-family: 'Arimo', Arial, Helvetica, Verdana;
+	letter-spacing: 1.5px;
+	font-size: 14px;
+	letter-spacing: 2px;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 24px 0px 24px 0px
+}
+p{
+	padding: 0px 0px 24px 0px;
+	font-size: 15px;
+	max-width: 600px
+}
+
+/*links*/
+a:active{ outline: none}
+a:focus{ -moz-outline-style: none; outline-style: none}
+
+p a:link, p a:visited{
+	border-bottom: 1px dotted #f44336;
+	color: #f44336
+}
+ul a:link, ul a:visited{
+	color: #f44336;
+	border-bottom: 1px dotted #f44336;
+	padding-bottom: 2px;
+	font-family: 'Arimo', Arial, Helvetica, Verdana;
+	letter-spacing: 1px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	line-height: 22px
+}
+h2 a:link, h2 a:visited{
+	color: #f44336;
+	border-bottom: 1px solid #f44336;
+	padding-bottom: 2px
+}
+a:link, a:visited{
+	text-decoration: none;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+	transition: all 0.25s ease
+}
+p a:hover, ul a:hover, h2 a:hover{
+	border-bottom: 1px dotted #aaaaaa;
+	color: #aaaaaa
+}
+.anchorlink:link, .anchorlink:visited {
+	background: url('images/sprite.png') no-repeat top left;
+	padding-left: 18px;
+	background-position: 0 -106px;
+	-webkit-transition: color 0.25s ease;
+	-moz-transition: color 0.25s ease;
+	-o-transition: color 0.25s ease;
+	transition: color 0.25s ease
+}
+.anchorlink:hover {
+	background: url('images/sprite.png') no-repeat top left;
+	background-position: 0 -82px
+}
+
+/*text highlighting*/
+::selection{ background: #E8E8E8; color: #f44336; } /* Safari */
+::-moz-selection{ background: #E8E8E8; color: #f44336; } /* Firefox */
+
+/*media queries*/
+@media screen and (min-width: 500px) {
+body{line-height: 22px}
+header{padding: 300px 0 0 0}
+.logo{width: 54px;padding: 0 0 24px 6%}
+p{line-height: 24px}
+li{margin: 0 0 1px 0}
+hr{margin: 5px 0px 30px 0px}
+}
+
+/* NEW CSS */
+span.emailme:after { 
+	content: "Hire Me: me@normankristiono.net";
+	color: #f44336;
+    border-bottom: 1px dotted #f44336;
+    padding-bottom: 2px;
+    font-family: 'Arimo', Arial, Helvetica, Verdana;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 22px;
+	cursor: pointer
+}
