@@ -1,4 +1,0 @@
-Connection has been detected, joined the correct Wi-Fi network
-Device or resource busy
-You may need to another Wi-Fi USB adapter
-for create AP or try use with local connetion(Ethernet).
