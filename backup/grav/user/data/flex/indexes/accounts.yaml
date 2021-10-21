@@ -1,9 +1,0 @@
-version: '1.1'
-timestamp: 1629275636
-count: 1
-index:
-  norman:
-    storage_key: norman
-    storage_timestamp: 1629275636
-    key: norman
-    email: norman.kristiono@gmail.com

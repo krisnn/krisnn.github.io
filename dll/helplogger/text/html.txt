@@ -1,7 +1,0 @@
-<b:if cond='data:blog.pageType != &quot;static_page&quot;'>
-<b:if cond='data:blog.pageType != &quot;item&quot;'>
-<div expr:id='&quot;summary&quot; + data:post.id'><data:post.body/></div>
-<script type='text/javascript'>createSummaryAndThumb(&quot;summary<data:post.id/>&quot;,&quot;<data:post.url/>&quot;,&quot;<data:post.title/>&quot;);</script>
-</b:if></b:if>
-<b:if cond='data:blog.pageType == &quot;item&quot;'><data:post.body/></b:if>
-<b:if cond='data:blog.pageType == &quot;static_page&quot;'><data:post.body/></b:if>
