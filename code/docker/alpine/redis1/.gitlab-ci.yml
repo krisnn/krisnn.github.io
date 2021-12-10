@@ -1,0 +1,68 @@
+stages:
+  - build
+  - deploy
+
+amd64 redis build:
+  stage: yobasystems/alpine-docker:dind
+  stage: build
+  tags:
+    - amd64
+  script:
+    - apk add --update git
+    - echo "$CI_JOB_TOKEN" | docker login -u gitlab-ci-token "$DOCKER_REGISTRY" --password-stdin
+    - cd alpine-redis-amd64/ && docker build -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:master -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:latest -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:amd64 .
+    - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:master
+    - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:latest
+    - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:amd64
+
+arm64v8 redis build:
+  stage: yobasystems/alpine-docker:aarch64-dind
+  stage: build
+  tags:
+    - aarch64
+  script:
+    - apk add --update git
+    - echo "$CI_JOB_TOKEN" | docker login -u gitlab-ci-token "$DOCKER_REGISTRY" --password-stdin
+    - cd alpine-redis-aarch64/ && docker build -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:arm64v8 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:arm64v8 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:arm64v8 -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:aarch64 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:aarch64 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:aarch64 .
+    - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:arm64v8
+    - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:aarch64
+    - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin && docker push $DOCKER_REGISTRY_DOCKERHUB_REPO:arm64v8
+    - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin && docker push $DOCKER_REGISTRY_DOCKERHUB_REPO:aarch64
+    - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:arm64v8
+    - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:aarch64
+
+arm32v7 redis build:
+  stage: yobasystems/alpine-docker:armhf-dind
+  stage: build
+  tags:
+    - armhf
+  script:
+    - apk add --update git
+    - echo "$CI_JOB_TOKEN" | docker login -u gitlab-ci-token "$DOCKER_REGISTRY" --password-stdin
+    - cd alpine-redis-armhf/ && docker build -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:arm32v7 -t $DOCKER_REGISTRY_DOCKERHUB_REPO:arm32v7 -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:arm32v7 -t $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:armhf -t $DOCKER_REGISTRY_DOCKERHUB_REPO:armhf -t $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:armhf .
+    - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:arm32v7
+    - docker push $DOCKER_REGISTRY/$DOCKER_REGISTRY_REPO:armhf
+    - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin && docker push $DOCKER_REGISTRY_DOCKERHUB_REPO:arm32v7
+    - echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin && docker push $DOCKER_REGISTRY_DOCKERHUB_REPO:armhf
+    - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:arm32v7
+    - echo "$QUAY_PASSWORD" | docker login -u "$QUAY_USERNAME" quay.io --password-stdin && docker push $DOCKER_REGISTRY_QUAY/$DOCKER_REGISTRY_QUAY_REPO:armhf
+
+Github Mirror:
+  stage: deploy
+  tags:
+    - deploy
+  script:
+    - git push --mirror https://$GITHUB_USERNAME:$GITHUB_PASSWORD@$GITHUB_REPO
+    - git push https://$GITHUB_USERNAME:$GITHUB_PASSWORD@$GITHUB_REPO HEAD:master
+
+Bitbucket Mirror:
+  stage: deploy
+  tags:
+    - deploy
+  script:
+    - mkdir -p ~/.ssh
+    - echo "$BB_SSH_PRIVATE_KEY" | tr -d '\r' > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -H 'bitbucket.org' >> ~/.ssh/known_hosts
+    - git push --mirror git@$BITBUCKET_REPO
+    - git push git@$BITBUCKET_REPO HEAD:master

@@ -1,0 +1,11 @@
+#!/bin/sh
+# Update Repository Info
+# Not required while using --no-cache option
+#apk update
+
+# Apply security updates to container
+# Upgrade container to latest software
+apk --no-cache upgrade
+
+#
+##########---END---#######################

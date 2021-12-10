@@ -1,0 +1,28 @@
+# override any of these variable on main.yaml file
+BASE_CONFIG_FILENAME=default.conf
+KANNEL_BEARERBOX_HOST=bearerbox
+# The usb modem sim card number
+KANNEL_BEARERBOX_MSISDN=
+# The Mobile Network Operator sms center
+KANNEL_BEARERBOX_SMSC=
+# 0 is for ’debug’, 1 ’info’, 2 ’warning, 3 ’error’ and 4 ’panic’
+# empty variable defaults to 0
+KANNEL_LOG_LEVEL=3
+# post callback url for inbound sms
+KANNEL_SMSS_CALLBACK_URL=
+
+KANNEL_DLR_STORAGE_TYPE=redis
+KANNEL_DLR_STORAGE_HOST=redis
+KANNEL_DLR_STORAGE_PORT=
+KANNEL_DLR_STORAGE_DBNAME=
+KANNEL_DLR_STORAGE_USERNAME=
+KANNEL_DLR_STORAGE_PASSWORD=
+
+KANNEL_DEVICE_TTY=/dev/ttyUSB0
+KANNEL_DEVICE_HOST=localhost
+KANNEL_DEVICE_TYPE="modem"
+KANNEL_DEVICE_MANUFACTURER=Huawei
+KANNEL_DEVICE_SMSCID=Huawei
+KANNEL_DEVICE_MODEM_NAME=huawei
+KANNEL_DEVICE_MODEM_DETECT_STRING="huawei"
+KANNEL_DEVICE_MODEM_INIT_STRING="AT+CNMI=3,1,0,1"
