@@ -1,9 +1,5 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-gem 'jekyll'
-
-group :jekyll_plugins do
-  gem "jekyll-sitemap"
-  gem "jekyll-paginate"
-  gem "jemoji"
-end
+gem 'github-pages'
+gem 'html-proofer'
+gem 'jekyll-admin'

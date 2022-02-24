@@ -1,0 +1,120 @@
+- name: "AWS Certified DevOps Engineer – Professional"
+  provider: "Amazon Web Services (AWS)"
+  id: "5R8GZSXDBEQ1QTK2"
+  exams:
+    - "DOP-C01"
+  date:
+    issue: 09.02.2021
+    expire: 09.02.2024
+  url: "https://www.youracclaim.com/badges/4acb1652-1867-4827-a5b9-a9e09c4551d5?source=personal_website"
+  badge: "/assets/extras/amazon/aws/badges/aws-certified-devops-engineer-professional.png"
+
+- name: "AWS Certified SysOps Administrator - Associate"
+  provider: "Amazon Web Services (AWS)"
+  id: "VFX4J41DDFB4QNG3"
+  exams:
+    - "SOA-C01"
+  date:
+    issue: 21.01.2021
+    expire: 21.01.2024
+  url: "https://www.youracclaim.com/badges/7e06a0f1-1eef-444d-9c6e-6de6d3b2a3ca?source=personal_website"
+  badge: "/assets/extras/amazon/aws/badges/aws-certified-sysops-administrator-associate.png"
+
+- name: "CKA: Certified Kubernetes Administrator"
+  provider: "The Linux Foundation"
+  id: "LF-cxexrp9qo2"
+  exams:
+    - "CKA"
+  date:
+    issue: 16.08.2020
+    expire: 16.08.2023
+  url: "https://www.youracclaim.com/badges/21dd458a-c431-4218-8fe7-045af0b6bb4b/personal_website"
+  badge: "/assets/extras/linuxfoundation/kubernetes/badges/certified-kubernetes-administrator.png"
+
+- name: "Microsoft Certified: Azure IoT Developer Specialty"
+  provider: "Microsoft"
+  id: "H412-7753"
+  exams:
+    - "AZ-220"
+  date:
+    issue: 02.05.2020
+    expire: 02.05.2022
+  url: "https://www.youracclaim.com/badges/e79bd7d5-472f-4cab-9f93-eb0ba600947b/personal_website"
+  badge: "/assets/extras/microsoft/azure/badges/microsoft-certified-azure-iot-developer-specialty.png"
+
+- name: "Microsoft Certified: Azure Security Engineer Associate"
+  provider: "Microsoft"
+  id: "H358-6513"
+  exams:
+    - "AZ-500"
+  date:
+    issue: 14.02.2020
+    expire: 14.02.2022
+  url: "https://www.youracclaim.com/badges/305fc452-db8a-4793-97b2-d30bd4f27b96/personal_website"
+  badge: "/assets/extras/microsoft/azure/badges/microsoft-certified-azure-security-engineer-associate.png"
+
+- name: "Microsoft Certified: Azure Solutions Architect Expert"
+  provider: "Microsoft"
+  id: "H309-7224"
+  exams:
+    - "AZ-300"
+    - "AZ-301"
+  date:
+    issue: 12.12.2019
+    expire: 12.12.2021
+  url: "https://www.youracclaim.com/badges/b9f58d0c-e336-42a2-a58c-0abc31b153e5/personal_website"
+  badge: "/assets/extras/microsoft/azure/badges/microsoft-certified-azure-solutions-architect-expert.png"
+
+- name: "Google Cloud Certified Professional Cloud Architect"
+  provider: "Google"
+  id: "14012358"
+  exams:
+    - "Professional Cloud Architect"
+  date:
+    issue: 14.10.2019
+    expire: 14.10.2021
+  url: "https://www.credential.net/ypumx28o"
+  badge: "/assets/extras/google/gcp/badges/google-certified-professional-cloud-architect.png"
+
+- name: "Google Cloud Certified Associate Cloud Engineer"
+  provider: "Google"
+  id: "13780268"
+  exams:
+    - "Associate Cloud Engineer"
+  date:
+    issue: 14.09.2019
+    expire: 14.09.2021
+  url: "https://www.credential.net/48aldh6r"
+  badge: "/assets/extras/google/gcp/badges/google-certified-associate-cloud-engineer.png"
+
+- name: "Microsoft Certified: Azure DevOps Engineer Expert"
+  provider: "Microsoft"
+  id: "H214-1173"
+  exams:
+    - "AZ-400"
+  date:
+    issue: 14.08.2019
+    expire: 14.08.2021
+  url: "https://www.youracclaim.com/badges/985f782c-0819-4a6e-9e2e-66812a552a05/personal_website"
+  badge: "/assets/extras/microsoft/azure/badges/microsoft-certified-azure-devops-engineer-expert.png"
+
+- name: "Microsoft Certified: Azure Administrator Associate"
+  provider: "Microsoft"
+  id: "H157-4323"
+  exams:
+    - "AZ-103"
+  date:
+    issue: 14.06.2019
+    expire: 14.06.2021
+  url: "https://www.youracclaim.com/badges/372b9774-1a69-433e-8421-4e8b32e96234/personal_website"
+  badge: "/assets/extras/microsoft/azure/badges/microsoft-certified-azure-administrator-associate.png"
+
+- name: "Red Hat Certified System Administrator (RHCSA)"
+  provider: "Red Hat"
+  id: "120-178-959"
+  exams:
+    - "EX200"
+  date:
+    issue: 14.10.2012
+  url: "https://www.redhat.com/rhtapps/services/verify?certId=120-178-959"
+  badge: "/assets/extras/redhat/badges/redhat-certified-system-administrator.png"

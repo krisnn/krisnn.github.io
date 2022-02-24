@@ -1,0 +1,37 @@
+---
+title: "IAM (Identity and Access Management)"
+layout: post
+date: 2017-01-01 22:00
+image: "/assets/img/projects.webp"
+headerImage: true
+projects: true
+hidden: true
+description: "This is a project under development."
+category: project
+author: sergiotocalini
+externalLink: false
+tag:
+- iam
+- sso
+- oauth
+---
+# Table of Contents
+1. [Introduction](#introduction)
+2. [Minimum Requirements](#minimum-requirements)
+3. [Deployment](#deployment)
+4. [Monitoring](#monitoring)
+5. [Conclusion](#conclusion)
+6. [References](#references)
+
+{:.center}
+[![Centralized Logging][diagram]][diagram]
+---
+
+# Introduction
+
+{:.justified}
+SSO & Centralized Authentication
+
+
+
+Mavapa

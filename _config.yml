@@ -1,37 +1,123 @@
-title: Hello, world! I'm krisn
-description: > # this means to ignore newlines until "baseurl:"
-  Web developer and it engineering focus on learning to be devops and also enjoy learning everything.
-keyword: > 
-  norman kristiono, normankristiono.net, krisn, krisnn_, 404website
-permalink: ':title/'
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://krisnn.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-site-twitter: #if your site has a twitter account, enter it here
+# main text of home
+name: Sergio Tocalini
+bio: "Software Engineer / DevOps Engineer / Full-Stack Developer / SRE"
 
-# Author Settings
-author: Norman Kristiono # add your name
-author-img: nk.png # add your photo
-about-author: IT Enthusiast. # add description
-#social-twitter: # add your Twitter handle
-#social-facebook: # add your Facebook handle
-social-github: krisnn # add your Github handle
-social-linkedin: nkristiono # add your Linkedin handle
-social-email: norman.kristiono@gmail.com # add your Email address
+# twitter summary info
+description: A blog about technology and stuff related
 
-# Disqus
-discus-identifier: # add your discus identifier
+# if it's an external image, update below for true
+# better with square images
+external-image: false
+picture: assets/img/profile.jpg
 
-# Tracker
-analytics: # Google Analytics
+# If you want to include your resume, set to true
+# and specify source (external or local).
+# resume: true
+# resume-external: true
+# resume-url: https://linkedin.com/in/sergiotocalinijoerg
 
-# Build Settings
-markdown: kramdown
+# url: https://sergiotocalini.github.io
+# your url: http://USERNAME.github.io
+
+permalink: /:categories/:title
+
+# To enable google analytics, supply your token below
+analytics-google: 'UA-145089178-1'
+
+# To enable piwik tracking, supply your url & site ID below
+# analytics-piwik-url: 'piwik.my-host.com'
+# analytics-piwik-id: 1
+
+# if you don't want comments in your posts, leave categories empty
+# disqus:
+#  shortname: sergiotocalini # enter this from your disqus account
+#  categories: [blog] # only show disqus for posts that have these categories
+
+# if you don't have any of social below, comment the line
+email: sergiotocalini@gmail.com
+# facebook: sergiotocalini
+# twitter: sergiotocalini
+# google: mygoogle
+instagram: sergiotocalini
+# pinterest: sergiotocalini
+linkedin: sergiotocalinijoerg
+# youtube: myyoutube
+# spotify: sergiotocalini
+github: sergiotocalini
+# gitlab: mygitlab
+# lastfm: sergiotocalini
+# stackoverflow: 7044681/mystackoverflow
+# quora: userquora
+# reddit: sergiotocalini
+# medium: mymedium
+# vimeo: myvimeo
+# lanyrd: mylanyrd
+# vivino: sergiotocalini
+# wakatime: sergiotocalini
+
+authors:
+    sergiotocalini:
+        name: "Sergio Tocalini"
+        bio: "Software Engineer / DevOps Engineer / Full-Stack Developer / SRE"
+        external-image: false
+        picture: assets/img/profile.jpg
+        twitter: sergiotocalini
+
+# do you want a larger site? change the option below
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: normal
+
+# if you don't need pagination, comment the *paginate* configs below
+paginate: 10
+paginate_path: "blog/:num/"
+
+# if you don't need projects, comment the *projects* configs below
+projects: true
+
+# if you don't need "about" or "blog", comment them out below
+about: true
+blog: true
+
+# do you want to show the "read time" of the posts?
+read-time: true
+
+# do you want to show the "tags" inside the posts?
+show-tags: true
+
+# related posts inside a post?
+related: true
+
+# Display links for next and previous posts for the specified categories
+post-advance-links: [blog]
+
+# show author block at the end of a post ?
+show-author: true
+
+# do you want some animations?
+animation: true
+
+# collections:
+#   certifications:
+#     output: true
+#     permalink: /:collection/:slug
+
 plugins:
-  - jekyll-sitemap
+  - jekyll-admin
+  - jekyll-feed
+  - jekyll-gist
   - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
   - jemoji
 
-paginate: 3
-paginate_path: "/page/:num"
+jekyll-mentions:
+    base_url: https://github.com
 
-exclude: ["node_modules", "gulpfile.js", "package.json", "yarn.lock"]
+compress_html:
+    ignore:
+        envs:
+        - development
+        - stage
+
+exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]
