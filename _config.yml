@@ -1,6 +1,6 @@
 # main text of home
-name: Sergio Tocalini
-bio: "Software Engineer / DevOps Engineer / Full-Stack Developer / SRE"
+name: Norman Kristiono
+bio: "Full-Stack Developer / DevOps Engineer
 
 # twitter summary info
 description: A blog about technology and stuff related
@@ -22,7 +22,7 @@ picture: assets/img/profile.jpg
 permalink: /:categories/:title
 
 # To enable google analytics, supply your token below
-analytics-google: 'UA-145089178-1'
+#analytics-google: 'UA-145089178-1'
 
 # To enable piwik tracking, supply your url & site ID below
 # analytics-piwik-url: 'piwik.my-host.com'
@@ -34,16 +34,16 @@ analytics-google: 'UA-145089178-1'
 #  categories: [blog] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-email: sergiotocalini@gmail.com
+email: norman.kristiono@gmail.com
 # facebook: sergiotocalini
 # twitter: sergiotocalini
 # google: mygoogle
-instagram: sergiotocalini
+instagram: krisnn
 # pinterest: sergiotocalini
-linkedin: sergiotocalinijoerg
+linkedin: nkristiono
 # youtube: myyoutube
 # spotify: sergiotocalini
-github: sergiotocalini
+github: krisnn
 # gitlab: mygitlab
 # lastfm: sergiotocalini
 # stackoverflow: 7044681/mystackoverflow
@@ -57,11 +57,11 @@ github: sergiotocalini
 
 authors:
     sergiotocalini:
-        name: "Sergio Tocalini"
-        bio: "Software Engineer / DevOps Engineer / Full-Stack Developer / SRE"
+        name: "Norman Kristiono"
+        bio: "Full-Stack Developer / DevOps Engineer
         external-image: false
         picture: assets/img/profile.jpg
-        twitter: sergiotocalini
+        #twitter: sergiotocalini
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
