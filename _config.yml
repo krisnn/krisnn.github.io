@@ -111,8 +111,8 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
-jekyll-mentions:
-    base_url: https://github.com
+#jekyll-mentions:
+#    base_url: https://github.com
 
 #compress_html:
 #    ignore:
