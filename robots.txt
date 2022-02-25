@@ -5,4 +5,4 @@ Disallow: /*.pdf$
 Disallow: /*.png$
 Disallow: /*.jpg$
 
-Sitemap: https://sergiotocalini.github.io/sitemap.xml
+Sitemap: https://krisnn.github.io/sitemap.xml

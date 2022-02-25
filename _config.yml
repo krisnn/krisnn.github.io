@@ -56,7 +56,7 @@ github: krisnn
 # wakatime: sergiotocalini
 
 authors:
-    sergiotocalini:
+    normankristiono:
         name: "Norman Kristiono"
         bio: "Full-Stack Developer / DevOps Engineer
         external-image: false
@@ -114,10 +114,10 @@ plugins:
 jekyll-mentions:
     base_url: https://github.com
 
-compress_html:
-    ignore:
-        envs:
-        - development
-        - stage
+#compress_html:
+#    ignore:
+#        envs:
+#        - development
+#        - stage
 
-exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]
+#exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]
