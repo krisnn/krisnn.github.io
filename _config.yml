@@ -1,6 +1,6 @@
 # main text of home
 name: Norman Kristiono
-bio: "Full-Stack Developer / DevOps Engineer
+bio: "Full-Stack Developer / DevOps Engineer"
 
 # twitter summary info
 description: A blog about technology and stuff related.
@@ -58,7 +58,7 @@ github: krisnn
 authors:
     normankristiono:
         name: "Norman Kristiono"
-        bio: "Full-Stack Developer / DevOps Engineer
+        bio: "Full-Stack Developer / DevOps Engineer"
         external-image: false
         picture: assets/img/profile.jpg
         #twitter: sergiotocalini
@@ -111,8 +111,8 @@ plugins:
   - jekyll-sitemap
   - jemoji
 
-#jekyll-mentions:
-#    base_url: https://github.com
+jekyll-mentions:
+    base_url: https://github.com
 
 #compress_html:
 #    ignore:
