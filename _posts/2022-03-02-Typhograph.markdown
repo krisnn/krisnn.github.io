@@ -1,19 +1,17 @@
 ---
-title: "Monitoring"
+title: "Typhograph"
 layout: post
-date: 2016-12-01 22:00
-image: "/assets/img/projects.webp"
-headerImage: true
+date: 2022-03-02 16:00
+headerImage: false
 projects: true
 hidden: true # don't count this post in blog pagination
-description: "This is a project under development."
-category: project
-author: sergiotocalini
+description: "Tipografi pada situs ini."
+category: blog
+author: krisnn
 externalLink: false
 tag:
-- monitoring
-- devops
-- devsecops
+- typhograph
+- tool
 ---
 {:.justified}
 {% capture admonition_message %}
