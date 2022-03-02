@@ -14,7 +14,7 @@ picture: assets/img/profile.jpg
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: https://linkedin.com/in/sergiotocalinijoerg
+resume-url: https://linkedin.com/in/nkristiono
 
 url: https://krisnn.github.io
 your url: http://krisnn.github.io
@@ -97,10 +97,10 @@ show-author: true
 # do you want some animations?
 animation: true
 
-# collections:
-#   certifications:
-#     output: true
-#     permalink: /:collection/:slug
+collections:
+   certifications:
+     output: true
+     permalink: /:collection/:slug
 
 plugins:
   - jekyll-admin
