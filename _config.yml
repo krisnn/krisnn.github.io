@@ -12,12 +12,12 @@ picture: assets/img/profile.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-# resume: true
-# resume-external: true
-# resume-url: https://linkedin.com/in/sergiotocalinijoerg
+resume: true
+resume-external: true
+resume-url: https://linkedin.com/in/sergiotocalinijoerg
 
-# url: https://sergiotocalini.github.io
-# your url: http://USERNAME.github.io
+url: https://krisnn.github.io
+your url: http://krisnn.github.io
 
 permalink: /:categories/:title
 
