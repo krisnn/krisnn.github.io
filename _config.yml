@@ -1,14 +1,14 @@
 # main text of home
 name: Norman Kristiono
-bio: "Full-Stack Developer / DevOps Engineer"
+bio: "IT enthusiast"
 
 # twitter summary info
-description: A blog about technology and stuff related.
+description: A blog about technology and stuff related
 
 # if it's an external image, update below for true
 # better with square images
-external-image: false
-picture: assets/img/profile.jpg
+# external-image: false
+picture: assets/img/profile.png
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -16,8 +16,8 @@ resume: true
 resume-external: true
 resume-url: https://linkedin.com/in/nkristiono
 
-url: https://krisnn.github.io
-your url: http://krisnn.github.io
+# url: https://sergiotocalini.github.io
+# your url: http://USERNAME.github.io
 
 permalink: /:categories/:title
 
@@ -58,9 +58,9 @@ github: krisnn
 authors:
     normankristiono:
         name: "Norman Kristiono"
-        bio: "Full-Stack Developer / DevOps Engineer"
+        bio: "IT Enthusiast"
         external-image: false
-        picture: assets/img/profile.jpg
+        picture: assets/img/profile.png
         #twitter: sergiotocalini
 
 # do you want a larger site? change the option below
@@ -114,10 +114,10 @@ plugins:
 jekyll-mentions:
     base_url: https://github.com
 
-#compress_html:
-#    ignore:
-#        envs:
-#        - development
-#        - stage
+compress_html:
+    ignore:
+        envs:
+        - development
+        - stage
 
-#exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]
+exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]

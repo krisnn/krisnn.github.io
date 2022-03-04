@@ -4,8 +4,8 @@ layout: page
 ---
 <img src="{{ site.url }}/{{ site.picture }}" alt="Profile" class="profile-img"/>
 <header class="header-home annimate">
-  <h1 class="title">Norman Kristiono</h1>
-  <h2 class="description">Full-Stack Developer / DevOps Engineer</h2>
+  <h1 class="title">Sergio Tocalini</h1>
+  <h2 class="description">Software Engineer / DevOps Engineer / Full-Stack Developer / SRE</h2>
   {% include social-links.html %}
 </header>
 
