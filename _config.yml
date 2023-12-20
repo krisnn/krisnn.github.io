@@ -1,5 +1,5 @@
 # main text of home
-name: Norman Kristiono
+name: Kristiono N
 bio: "IT enthusiast"
 
 # twitter summary info
@@ -57,7 +57,7 @@ github: krisnn
 
 authors:
     normankristiono:
-        name: "Norman Kristiono"
+        name: "Krisnn"
         bio: "IT Enthusiast"
         external-image: false
         picture: assets/img/profile.png
